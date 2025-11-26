@@ -114,19 +114,15 @@ export function GlassmorphismNav() {
         <div className="w-[90vw] max-w-xs md:max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-3 md:px-6 md:py-2">
             <div className="flex items-center justify-between">
-              {/* Logo */}
+              {/* Logo / Brand Name */}
               <Link
                 href="/"
                 className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer"
               >
                 <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-                  <Image
-                    src="/images/cliste-logo.png"
-                    alt="Cliste"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-contain"
-                  />
+                  <span className="text-xl md:text-2xl font-bold">
+                    narxu
+                  </span>
                 </div>
               </Link>
 
