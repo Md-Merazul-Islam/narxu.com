@@ -7,7 +7,7 @@ const projects = [
   {
     title: "AI Chatbot Platform",
     category: "AI Solutions",
-    image: "/ai-chat.jpg",
+    image: "/public/ai-chat.jpg",
     color: "from-purple-500/20 to-blue-500/20",
     services: ["AI Development", "Web App", "24/7 Support"],
     description: "Enterprise AI chatbot handling 10,000+ daily conversations with 95% accuracy"
