@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import AiAgent from "@/assets/ai-chat.jpg"
 
 const projects = [
   {
     title: "AI Chatbot Platform",
     category: "AI Solutions",
-    image: "/public/ai-chat.jpg",
+    image: AiAgent,
     color: "from-purple-500/20 to-blue-500/20",
     services: ["AI Development", "Web App", "24/7 Support"],
     description: "Enterprise AI chatbot handling 10,000+ daily conversations with 95% accuracy"
