@@ -3,6 +3,9 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import AiAgent from "@/assets/ai-chat.jpg"
+import Ecom from "@/assets/ecommerce-revolution.jpg"
+import BankingApp from "@/assets/mobile-banking.jpg"
+
 
 const projects = [
   {
@@ -16,7 +19,7 @@ const projects = [
   {
     title: "E-commerce Revolution",
     category: "Web Development",
-    image: "/ecommerce-revolution.jpg",
+    image: Ecom,
     color: "from-orange-500/20 to-red-500/20",
     services: ["Website Development", "SEO", "Digital Marketing"],
     description: "Complete e-commerce solution boosting sales by 300% in first 6 months"
@@ -24,7 +27,7 @@ const projects = [
   {
     title: "Mobile Banking App",
     category: "App Development",
-    image: "/mobile-banking.jpg",
+    image:  BankingApp,
     color: "from-green-500/20 to-emerald-500/20",
     services: ["Mobile App", "Security", "24/7 Support"],
     description: "Secure mobile banking app serving 50,000+ users with zero downtime"

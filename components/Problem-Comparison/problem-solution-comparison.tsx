@@ -1,4 +1,18 @@
-import { Phone, MessageCircle, Calendar, Wrench, MessageSquare, Code, Globe, Search, Smartphone, Video, TrendingUp, X, Check } from "lucide-react"
+import {
+  Phone,
+  MessageCircle,
+  Calendar,
+  Wrench,
+  MessageSquare,
+  Code,
+  Globe,
+  Search,
+  Smartphone,
+  Video,
+  TrendingUp,
+  X,
+  Check,
+} from "lucide-react";
 
 export async function ProblemSolutionComparison() {
   const comparisons = [
@@ -61,8 +75,8 @@ export async function ProblemSolutionComparison() {
       channel: "Project Management",
       problem: "Missed deadlines and scope creep",
       solution: "Agile development with regular updates",
-    }
-  ]
+    },
+  ];
 
   return (
     <section className="relative py-16 sm:py-24">
@@ -82,7 +96,8 @@ export async function ProblemSolutionComparison() {
           in Digital Revenue
         </h2>
         <p className="text-lg sm:text-xl text-slate-400 max-w-4xl mx-auto">
-          See how outdated digital systems are costing your business while competitors scale with AI and automation
+          See how outdated digital systems are costing your business while
+          competitors scale with AI and automation
         </p>
       </div>
 
@@ -99,37 +114,50 @@ export async function ProblemSolutionComparison() {
                     </th>
                     <th className="text-left py-6 px-6">
                       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-50 border-l-4 border-red-500">
-                        <span className="text-red-600 font-semibold">Traditional Approach</span>
+                        <span className="text-red-600 font-semibold">
+                          Traditional Approach
+                        </span>
                       </div>
                     </th>
                     <th className="text-left py-6 px-6">
                       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-green-50 border-l-4 border-green-500">
-                        <span className="text-green-600 font-semibold">With Cliste Solutions</span>
+                        <span className="text-green-600 font-semibold">
+                          With Narxu Solutions
+                        </span>
                       </div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisons.map((item, index) => (
-                    <tr key={index} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+                    <tr
+                      key={index}
+                      className="border-b border-slate-100 hover:bg-slate-50 transition-colors"
+                    >
                       <td className="py-5 px-6">
                         <div className="flex items-center gap-3">
                           <div className="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center flex-shrink-0">
                             <item.icon className="w-4 h-4 text-slate-600" />
                           </div>
-                          <span className="text-slate-800 font-medium text-sm">{item.channel}</span>
+                          <span className="text-slate-800 font-medium text-sm">
+                            {item.channel}
+                          </span>
                         </div>
                       </td>
                       <td className="py-5 px-6">
                         <div className="flex items-start gap-2">
                           <X className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-700 text-sm">{item.problem}</span>
+                          <span className="text-slate-700 text-sm">
+                            {item.problem}
+                          </span>
                         </div>
                       </td>
                       <td className="py-5 px-6">
                         <div className="flex items-start gap-2">
                           <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-700 text-sm">{item.solution}</span>
+                          <span className="text-slate-700 text-sm">
+                            {item.solution}
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -163,15 +191,30 @@ export async function ProblemSolutionComparison() {
                             className="animate-draw-circle"
                           />
                           <defs>
-                            <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.8" />
-                              <stop offset="100%" stopColor="#dc2626" stopOpacity="0.8" />
+                            <linearGradient
+                              id="redGradient"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="0%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="#ef4444"
+                                stopOpacity="0.8"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="#dc2626"
+                                stopOpacity="0.8"
+                              />
                             </linearGradient>
                           </defs>
                         </svg>
                       </div>
                       <p className="text-sm text-slate-600 mt-2 max-w-xs">
-                        Lost revenue from poor digital presence and inefficient systems
+                        Lost revenue from poor digital presence and inefficient
+                        systems
                       </p>
                     </td>
                     <td className="py-10 px-12">
@@ -199,15 +242,30 @@ export async function ProblemSolutionComparison() {
                             className="animate-draw-circle"
                           />
                           <defs>
-                            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                              <stop offset="0%" stopColor="#22c55e" stopOpacity="0.8" />
-                              <stop offset="100%" stopColor="#10b981" stopOpacity="0.8" />
+                            <linearGradient
+                              id="greenGradient"
+                              x1="0%"
+                              y1="0%"
+                              x2="100%"
+                              y2="0%"
+                            >
+                              <stop
+                                offset="0%"
+                                stopColor="#22c55e"
+                                stopOpacity="0.8"
+                              />
+                              <stop
+                                offset="100%"
+                                stopColor="#10b981"
+                                stopOpacity="0.8"
+                              />
                             </linearGradient>
                           </defs>
                         </svg>
                       </div>
                       <p className="text-sm text-slate-600 mt-2 max-w-xs">
-                        Increased revenue from optimized digital ecosystem and automation
+                        Increased revenue from optimized digital ecosystem and
+                        automation
                       </p>
                     </td>
                   </tr>
@@ -227,21 +285,27 @@ export async function ProblemSolutionComparison() {
                   <div className="w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-4 h-4 text-slate-600" />
                   </div>
-                  <span className="text-slate-800 font-semibold text-sm">{item.channel}</span>
+                  <span className="text-slate-800 font-semibold text-sm">
+                    {item.channel}
+                  </span>
                 </div>
 
                 <div className="grid grid-cols-2 divide-x divide-slate-200">
                   <div className="p-4 bg-red-50/50">
                     <div className="flex items-start gap-2">
                       <X className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-xs text-slate-700 leading-relaxed">{item.problem}</span>
+                      <span className="text-xs text-slate-700 leading-relaxed">
+                        {item.problem}
+                      </span>
                     </div>
                   </div>
 
                   <div className="p-4 bg-green-50/50">
                     <div className="flex items-start gap-2">
                       <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-xs text-slate-700 leading-relaxed">{item.solution}</span>
+                      <span className="text-xs text-slate-700 leading-relaxed">
+                        {item.solution}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -250,7 +314,9 @@ export async function ProblemSolutionComparison() {
 
             <div className="backdrop-blur-sm bg-slate-50/50 rounded-xl border border-slate-200 overflow-hidden mt-6">
               <div className="p-4 border-b border-slate-200 bg-slate-50">
-                <span className="text-slate-700 font-semibold text-xs uppercase tracking-wider">Annual Business Impact</span>
+                <span className="text-slate-700 font-semibold text-xs uppercase tracking-wider">
+                  Annual Business Impact
+                </span>
               </div>
               <div className="grid grid-cols-2 divide-x divide-slate-200">
                 <div className="p-4 py-8 bg-red-50/50 flex flex-col items-center justify-center text-center">
@@ -278,9 +344,23 @@ export async function ProblemSolutionComparison() {
                         className="animate-draw-circle"
                       />
                       <defs>
-                        <linearGradient id="redGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#ef4444" stopOpacity="0.8" />
-                          <stop offset="100%" stopColor="#dc2626" stopOpacity="0.8" />
+                        <linearGradient
+                          id="redGradientMobile"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#ef4444"
+                            stopOpacity="0.8"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#dc2626"
+                            stopOpacity="0.8"
+                          />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -314,9 +394,23 @@ export async function ProblemSolutionComparison() {
                         className="animate-draw-circle"
                       />
                       <defs>
-                        <linearGradient id="greenGradientMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#22c55e" stopOpacity="0.8" />
-                          <stop offset="100%" stopColor="#10b981" stopOpacity="0.8" />
+                        <linearGradient
+                          id="greenGradientMobile"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
+                          <stop
+                            offset="0%"
+                            stopColor="#22c55e"
+                            stopOpacity="0.8"
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor="#10b981"
+                            stopOpacity="0.8"
+                          />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -331,5 +425,5 @@ export async function ProblemSolutionComparison() {
         </div>
       </div>
     </section>
-  )
+  );
 }

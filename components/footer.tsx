@@ -2,6 +2,8 @@
 import type React from "react";
 import type { ComponentProps, ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import Logo from "@/assets/logo-narxu.png";
+
 import {
   FacebookIcon,
   InstagramIcon,
@@ -68,17 +70,18 @@ export function Footer() {
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
           <Image
-            src="/images/cliste-logo.png"
-            alt="Cliste Logo"
-            width={64}
-            height={64}
-            className="size-16"
+            src={Logo}
+            alt="Narxu Logo"
+            width={180} // pixel values, not 0-1 scale
+            height={100} // adjust height to match your logo ratio
+            className=""
+            priority
           />
-          <div className="text-muted-foreground mt-8 text-sm md:mt-0 md:block hidden">
-            <p>© {new Date().getFullYear()} Cliste. All rights reserved.</p>
+
+          <div className="hidden md:block mt-8 text-sm text-muted-foreground">
+            <p>© {new Date().getFullYear()} Narxu. All rights reserved.</p>
           </div>
         </AnimatedContainer>
-
         <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
           {footerLinks.map((section, index) => (
             <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
@@ -105,7 +108,7 @@ export function Footer() {
 
       <div className="md:hidden mt-8 text-center space-y-2">
         <p className="text-muted-foreground text-sm">
-          © {new Date().getFullYear()} Cliste. All rights reserved.
+          © {new Date().getFullYear()} Narxu. All rights reserved.
         </p>
         <p className="text-muted-foreground text-xs">
           Web Development by Merazul
