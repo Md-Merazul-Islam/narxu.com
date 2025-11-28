@@ -5,9 +5,8 @@ import Aurora from "@/components/Aurora";
 import { FeaturesSection } from "@/components/FeaturesSection/features-section";
 import { TestimonialsSection } from "@/components/Testimonial/testimonials-section";
 import { CTASection } from "@/components/cta-section";
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/footer/footer";
 import { Work } from "@/components/Works/Work";
-
 
 export default function HomePage() {
   return (

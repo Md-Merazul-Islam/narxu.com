@@ -2,7 +2,7 @@
 
 import { GlassmorphismNav } from "@/components/Navbar/glassmorphism-nav";
 import Aurora from "@/components/Aurora";
-import { Footer } from "@/components/footer";
+import { Footer } from "@/components/footer/footer";
 import { DealershipHeroHeader } from "@/components/dealership-hero-header";
 import { SplitScreenBeforeAfter } from "@/components/split-screen-before-after";
 import { TyreKickersSection } from "@/components/tyre-kickers-section";
