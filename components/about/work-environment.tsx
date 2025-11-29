@@ -16,11 +16,11 @@ const amenities = [
 ]
 
 const galleryImages = [
-  { src: "/modern-office-workspace-tech-company.jpg", span: "col-span-2 row-span-2" },
-  { src: "/office-lounge-relaxation-area.jpg", span: "col-span-1" },
-  { src: "/meeting-room-modern-glass.jpg", span: "col-span-1" },
-  { src: "/coffee-bar-office-cafe.jpg", span: "col-span-1" },
-  { src: "/gaming-room-office-entertainment.jpg", span: "col-span-1" },
+  { src: "https://res.cloudinary.com/dnsorselg/image/upload/v1764319764/modern-office-workspace-tech-company_qvxykk.jpg", span: "col-span-2 row-span-2" },
+  { src: "https://res.cloudinary.com/dnsorselg/image/upload/v1764319826/office-lounge-relaxation-area_jw6xn8.jpg", span: "col-span-1" },
+  { src: "https://res.cloudinary.com/dnsorselg/image/upload/v1764319874/meeting-room-modern-glass_cosv3i.jpg", span: "col-span-1" },
+  { src: "https://res.cloudinary.com/dnsorselg/image/upload/v1764319977/coffee-bar-office-cafe_r07yrt.jpg", span: "col-span-1" },
+  { src: "https://res.cloudinary.com/dnsorselg/image/upload/v1764320042/gaming-room-office-entertainment_pkjpwz.jpg", span: "col-span-1" },
 ]
 
 export function WorkEnvironment() {
@@ -28,7 +28,7 @@ export function WorkEnvironment() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="relative py-20 px-4 md:px-6 lg:px-8">
+    <section ref={ref} className="relative py-20 px-4 md:px-6 lg:px-8 bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,12 +48,7 @@ export function WorkEnvironment() {
         </motion.div>
 
         {/* Image Gallery */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
-        >
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
@@ -62,16 +57,19 @@ export function WorkEnvironment() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative overflow-hidden rounded-2xl border border-white/10 group ${image.span}`}
             >
-              <Image
-                src={image.src || "/placeholder.svg"}
-                alt="Office environment"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
+              <div className="aspect-square relative">
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt="Office environment"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Amenities */}
         <motion.div

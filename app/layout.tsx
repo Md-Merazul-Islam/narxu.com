@@ -1,46 +1,44 @@
-import type React from "react";
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import Aurora from "@/components/Aurora";
+import { Footer } from "@/components/footer/footer";
+import { GlassmorphismNav } from "@/components/Navbar/glassmorphism-nav";
 import "./globals.css";
-import { PageTransition } from "@/components/page-transition";
-import { NavigationTransition } from "@/components/navigation-transition";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Dancing_Script, Caveat } from "next/font/google";
-
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
-  variable: "--font-dancing-script",
-  display: "swap",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
-  title: "Narxu - AI Automation for Enterprise",
-  description:
-    "Transform your business with intelligent AI automation solutions. Empower your organization to operate at the speed of thought.",
-  generator: "v0.app",
+  title: "Cliste - AI-Powered Business Solutions",
+  description: "AI automation solutions for modern businesses",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`font-sans antialiased ${dancingScript.variable} ${caveat.variable}`}
-      >
-        <Suspense fallback={null}>
-          <NavigationTransition />
-          <PageTransition>{children}</PageTransition>
-        </Suspense>
-        <SpeedInsights />
+    <html lang="en">
+      <body>
+        <div className="min-h-screen bg-black overflow-hidden">
+          {/* Aurora Background - Fixed across all pages */}
+          <div className="fixed inset-0 w-full h-full">
+            <Aurora
+              colorStops={["#180a45", "#5e1b96", "#180a45"]}
+              amplitude={1.2}
+              blend={0.9}
+              speed={0.4}
+            />
+          </div>
+
+          {/* Navbar - Appears on all pages */}
+          <GlassmorphismNav />
+
+          {/* Page Content */}
+          <main className="relative z-10">
+            {children}
+          </main>
+
+          {/* Footer - Appears on all pages */}
+          <Footer />
+        </div>
       </body>
     </html>
   );
