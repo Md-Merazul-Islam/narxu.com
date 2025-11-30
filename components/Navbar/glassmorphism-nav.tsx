@@ -1,14 +1,99 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown, MessageSquare, Brain, Puzzle, Palette, Code2, Smartphone, Wrench, Headphones, Search, Megaphone, Video, TrendingUp, Users } from "lucide-react";
 import Image from "next/image";
 import Logo from "@/assets/logo-narxu.png";
 import Link from "next/link";
 
+const serviceCategories = [
+  {
+    name: "AI Solutions",
+    services: [
+      {
+        name: "AI Chatbot Development",
+        href: "/services/ai-chatbot",
+        icon: MessageSquare,
+        description: "24/7 intelligent chatbots",
+      },
+      { name: "Custom AI Model", href: "/services/ai-model-building", icon: Brain, description: "Tailored AI models" },
+      {
+        name: "AI Integration",
+        href: "/services/ai-integration",
+        icon: Puzzle,
+        description: "Seamless AI integration",
+      },
+    ],
+  },
+  {
+    name: "Web Development",
+    services: [
+      {
+        name: "Website Design",
+        href: "/services/website-design",
+        icon: Palette,
+        description: "Stunning UI/UX designs",
+      },
+      {
+        name: "Website Development",
+        href: "/services/website-development",
+        icon: Code2,
+        description: "Fast, scalable websites",
+      },
+    ],
+  },
+  {
+    name: "App Development",
+    services: [
+      {
+        name: "Mobile App Development",
+        href: "/services/app-development",
+        icon: Smartphone,
+        description: "iOS & Android apps",
+      },
+      { name: "App Maintenance", href: "/services/app-maintenance", icon: Wrench, description: "Updates & bug fixes" },
+    ],
+  },
+  {
+    name: "Support & Marketing",
+    services: [
+      {
+        name: "24/7 Support",
+        href: "/services/support-247",
+        icon: Headphones,
+        description: "Round-the-clock assistance",
+      },
+      {
+        name: "SEO Optimization",
+        href: "/services/seo-optimization",
+        icon: Search,
+        description: "Boost search rankings",
+      },
+      {
+        name: "Digital Marketing",
+        href: "/services/digital-marketing",
+        icon: Megaphone,
+        description: "Grow your audience",
+      },
+      {
+        name: "Video Editing",
+        href: "/services/video-editing",
+        icon: Video,
+        description: "Professional video content",
+      },
+      {
+        name: "Lead Generation",
+        href: "/services/lead-generation",
+        icon: TrendingUp,
+        description: "Quality lead acquisition",
+      },
+    ],
+  },
+];
+
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
+  { name: "Services", href: "/services", hasDropdown: true },
   { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -17,7 +102,11 @@ export function GlassmorphismNav() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const lastScrollY = useRef(0);
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,30 +117,16 @@ export function GlassmorphismNav() {
       if (typeof window !== "undefined") {
         const currentScrollY = window.scrollY;
 
-        console.log(
-          "[v0] Scroll event - currentScrollY:",
-          currentScrollY,
-          "lastScrollY:",
-          lastScrollY.current
-        );
-
-        // Only hide/show after scrolling past 50px to avoid flickering at top
         if (currentScrollY > 50) {
           if (
             currentScrollY > lastScrollY.current &&
             currentScrollY - lastScrollY.current > 5
           ) {
-            // Scrolling down - hide navbar
-            console.log("[v0] Hiding navbar - scrolling down");
             setIsVisible(false);
           } else if (lastScrollY.current - currentScrollY > 5) {
-            // Scrolling up - show navbar
-            console.log("[v0] Showing navbar - scrolling up");
             setIsVisible(true);
           }
         } else {
-          // Always show navbar when near top
-          console.log("[v0] Showing navbar - near top");
           setIsVisible(true);
         }
 
@@ -61,33 +136,48 @@ export function GlassmorphismNav() {
 
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar, { passive: true });
-      console.log("[v0] Scroll listener added");
 
       return () => {
         window.removeEventListener("scroll", controlNavbar);
         clearTimeout(timer);
-        console.log("[v0] Scroll listener removed");
       };
     }
 
     return () => clearTimeout(timer);
-  }, []); // Removed lastScrollY dependency to prevent infinite re-renders
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setServicesOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 150);
+  };
 
   const scrollToTop = () => {
-    console.log("[v0] Scrolling to top");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     if (href.startsWith("/")) {
       return;
     }
 
-    console.log("[v0] Attempting to scroll to:", href);
     const element = document.querySelector(href);
     if (element) {
-      console.log("[v0] Found element:", element);
-
       const rect = element.getBoundingClientRect();
       const currentScrollY =
         window.pageYOffset || document.documentElement.scrollTop;
@@ -95,17 +185,10 @@ export function GlassmorphismNav() {
       const navbarHeight = 100;
       const targetPosition = Math.max(0, elementAbsoluteTop - navbarHeight);
 
-      console.log("[v0] Element rect.top:", rect.top);
-      console.log("[v0] Current scroll position:", currentScrollY);
-      console.log("[v0] Element absolute top:", elementAbsoluteTop);
-      console.log("[v0] Target scroll position:", targetPosition);
-
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth",
       });
-    } else {
-      console.log("[v0] Element not found for:", href);
     }
     setIsOpen(false);
   };
@@ -138,8 +221,8 @@ export function GlassmorphismNav() {
                 <div className="w-28 h-10 md:w-28 md:h-10 flex items-center justify-center">
                   <Image
                     src={Logo}
-                    width={150} // pixel values, not 0-1 scale
-                    height={100} // adjust height to match your logo ratio
+                    width={150}
+                    height={100}
                     alt="Narxu Logo"
                     className="w-full h-full object-contain"
                     priority
@@ -150,7 +233,83 @@ export function GlassmorphismNav() {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center space-x-8">
                 {navigation.map((item) =>
-                  item.href.startsWith("/") ? (
+                  item.hasDropdown ? (
+                    <div
+                      key={item.name}
+                      ref={dropdownRef}
+                      className="relative"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <button
+                        className="text-white/80 hover:text-white hover:scale-105 transition-all duration-200 font-medium cursor-pointer flex items-center gap-1"
+                        onClick={() => setServicesOpen(!servicesOpen)}
+                      >
+                        {item.name}
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
+                        />
+                      </button>
+
+                      {/* Dropdown Menu */}
+                      <div
+                        className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-300 ${
+                          servicesOpen
+                            ? "opacity-100 translate-y-0 pointer-events-auto"
+                            : "opacity-0 -translate-y-2 pointer-events-none"
+                        }`}
+                      >
+                        <div className="bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl min-w-[700px]">
+                          {/* Dropdown Arrow */}
+                          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-l border-t border-white/10 rotate-45" />
+
+                          <div className="grid grid-cols-2 gap-6">
+                            {serviceCategories.map((category) => (
+                              <div key={category.name}>
+                                <h3 className="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-3">
+                                  {category.name}
+                                </h3>
+                                <div className="space-y-1">
+                                  {category.services.map((service) => (
+                                    <Link
+                                      key={service.href}
+                                      href={service.href}
+                                      className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-all duration-200 group"
+                                      onClick={() => setServicesOpen(false)}
+                                    >
+                                      <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-purple-500/20 to-violet-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <service.icon size={18} className="text-purple-400" />
+                                      </div>
+                                      <div>
+                                        <p className="text-sm font-medium text-white group-hover:text-purple-300 transition-colors">
+                                          {service.name}
+                                        </p>
+                                        <p className="text-xs text-gray-500">{service.description}</p>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+
+                          {/* View All Services Link */}
+                          <div className="mt-4 pt-4 border-t border-white/10">
+                            <Link
+                              href="/services"
+                              className="flex items-center justify-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              <Users size={16} />
+                              View All Services
+                              <span className="text-lg">→</span>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : item.href.startsWith("/") ? (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -230,10 +389,71 @@ export function GlassmorphismNav() {
                 : "opacity-0 -translate-y-8 scale-95 pointer-events-none"
             }`}
           >
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl max-h-[80vh] overflow-y-auto">
               <div className="flex flex-col space-y-1">
                 {navigation.map((item, index) =>
-                  item.href.startsWith("/") ? (
+                  item.hasDropdown ? (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                        className={`flex items-center justify-between w-full text-white/80 hover:text-white hover:bg-white/10 rounded-lg px-3 py-3 text-left transition-all duration-300 font-medium cursor-pointer ${
+                          isOpen ? "animate-mobile-menu-item" : ""
+                        }`}
+                        style={{
+                          animationDelay: isOpen ? `${index * 80 + 100}ms` : "0ms",
+                        }}
+                      >
+                        {item.name}
+                        <ChevronDown
+                          size={20}
+                          className={`transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                        />
+                      </button>
+
+                      {/* Mobile Services Dropdown */}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ${
+                          mobileServicesOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        <div className="pl-4 pt-2 space-y-4">
+                          {serviceCategories.map((category) => (
+                            <div key={category.name}>
+                              <h3 className="text-xs font-semibold text-purple-400 uppercase tracking-wider mb-2">
+                                {category.name}
+                              </h3>
+                              <div className="space-y-1">
+                                {category.services.map((service) => (
+                                  <Link
+                                    key={service.href}
+                                    href={service.href}
+                                    className="flex items-center gap-3 py-2 text-gray-400 hover:text-white transition-colors"
+                                    onClick={() => {
+                                      setIsOpen(false);
+                                      setMobileServicesOpen(false);
+                                    }}
+                                  >
+                                    <service.icon size={16} className="text-purple-400" />
+                                    <span className="text-sm">{service.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                          <Link
+                            href="/services"
+                            className="flex items-center gap-2 py-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                            onClick={() => {
+                              setIsOpen(false);
+                              setMobileServicesOpen(false);
+                            }}
+                          >
+                            View All Services →
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ) : item.href.startsWith("/") ? (
                     <Link
                       key={item.name}
                       href={item.href}
@@ -241,9 +461,7 @@ export function GlassmorphismNav() {
                         isOpen ? "animate-mobile-menu-item" : ""
                       }`}
                       style={{
-                        animationDelay: isOpen
-                          ? `${index * 80 + 100}ms`
-                          : "0ms",
+                        animationDelay: isOpen ? `${index * 80 + 100}ms` : "0ms",
                       }}
                       onClick={() => setIsOpen(false)}
                     >
@@ -257,9 +475,7 @@ export function GlassmorphismNav() {
                         isOpen ? "animate-mobile-menu-item" : ""
                       }`}
                       style={{
-                        animationDelay: isOpen
-                          ? `${index * 80 + 100}ms`
-                          : "0ms",
+                        animationDelay: isOpen ? `${index * 80 + 100}ms` : "0ms",
                       }}
                     >
                       {item.name}
@@ -272,9 +488,7 @@ export function GlassmorphismNav() {
                     isOpen ? "animate-mobile-menu-item" : ""
                   }`}
                   style={{
-                    animationDelay: isOpen
-                      ? `${navigation.length * 80 + 150}ms`
-                      : "0ms",
+                    animationDelay: isOpen ? `${navigation.length * 80 + 150}ms` : "0ms",
                   }}
                   onClick={() => scrollToSection("#contact")}
                 >
@@ -292,3 +506,301 @@ export function GlassmorphismNav() {
     </>
   );
 }
+
+
+
+
+// "use client";
+
+// import { useState, useEffect, useRef } from "react";
+// import { Menu, X, ArrowRight } from "lucide-react";
+// import Image from "next/image";
+// import Logo from "@/assets/logo-narxu.png";
+// import Link from "next/link";
+
+// const navigation = [
+//   { name: "Home", href: "/" },
+//   { name: "Services", href: "/services" },
+//   { name: "About Us", href: "/about" },
+//   { name: "Contact Us", href: "/contact" },
+// ];
+
+// export function GlassmorphismNav() {
+//   const [isOpen, setIsOpen] = useState(false);
+//   const [isVisible, setIsVisible] = useState(true);
+//   const [hasLoaded, setHasLoaded] = useState(false);
+//   const lastScrollY = useRef(0);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setHasLoaded(true);
+//     }, 100);
+
+//     const controlNavbar = () => {
+//       if (typeof window !== "undefined") {
+//         const currentScrollY = window.scrollY;
+
+//         console.log(
+//           "[v0] Scroll event - currentScrollY:",
+//           currentScrollY,
+//           "lastScrollY:",
+//           lastScrollY.current
+//         );
+
+//         // Only hide/show after scrolling past 50px to avoid flickering at top
+//         if (currentScrollY > 50) {
+//           if (
+//             currentScrollY > lastScrollY.current &&
+//             currentScrollY - lastScrollY.current > 5
+//           ) {
+//             // Scrolling down - hide navbar
+//             console.log("[v0] Hiding navbar - scrolling down");
+//             setIsVisible(false);
+//           } else if (lastScrollY.current - currentScrollY > 5) {
+//             // Scrolling up - show navbar
+//             console.log("[v0] Showing navbar - scrolling up");
+//             setIsVisible(true);
+//           }
+//         } else {
+//           // Always show navbar when near top
+//           console.log("[v0] Showing navbar - near top");
+//           setIsVisible(true);
+//         }
+
+//         lastScrollY.current = currentScrollY;
+//       }
+//     };
+
+//     if (typeof window !== "undefined") {
+//       window.addEventListener("scroll", controlNavbar, { passive: true });
+//       console.log("[v0] Scroll listener added");
+
+//       return () => {
+//         window.removeEventListener("scroll", controlNavbar);
+//         clearTimeout(timer);
+//         console.log("[v0] Scroll listener removed");
+//       };
+//     }
+
+//     return () => clearTimeout(timer);
+//   }, []); // Removed lastScrollY dependency to prevent infinite re-renders
+
+//   const scrollToTop = () => {
+//     console.log("[v0] Scrolling to top");
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   };
+
+//   const scrollToSection = (href: string) => {
+//     if (href.startsWith("/")) {
+//       return;
+//     }
+
+//     console.log("[v0] Attempting to scroll to:", href);
+//     const element = document.querySelector(href);
+//     if (element) {
+//       console.log("[v0] Found element:", element);
+
+//       const rect = element.getBoundingClientRect();
+//       const currentScrollY =
+//         window.pageYOffset || document.documentElement.scrollTop;
+//       const elementAbsoluteTop = rect.top + currentScrollY;
+//       const navbarHeight = 100;
+//       const targetPosition = Math.max(0, elementAbsoluteTop - navbarHeight);
+
+//       console.log("[v0] Element rect.top:", rect.top);
+//       console.log("[v0] Current scroll position:", currentScrollY);
+//       console.log("[v0] Element absolute top:", elementAbsoluteTop);
+//       console.log("[v0] Target scroll position:", targetPosition);
+
+//       window.scrollTo({
+//         top: targetPosition,
+//         behavior: "smooth",
+//       });
+//     } else {
+//       console.log("[v0] Element not found for:", href);
+//     }
+//     setIsOpen(false);
+//   };
+
+//   return (
+//     <>
+//       <nav
+//         className={`fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
+//           isVisible
+//             ? "translate-y-0 opacity-100"
+//             : "-translate-y-20 md:-translate-y-24 opacity-0"
+//         } ${
+//           hasLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+//         }`}
+//         style={{
+//           transition: hasLoaded
+//             ? "all 0.5s ease-out"
+//             : "opacity 0.8s ease-out, transform 0.8s ease-out",
+//         }}
+//       >
+//         {/* Main Navigation */}
+//         <div className="w-[90vw] max-w-xs md:max-w-4xl mx-auto">
+//           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-3 md:px-6 md:py-2">
+//             <div className="flex items-center justify-between">
+//               {/* Logo / Brand Name */}
+//               <Link
+//                 href="/"
+//                 className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer"
+//               >
+//                 <div className="w-28 h-10 md:w-28 md:h-10 flex items-center justify-center">
+//                   <Image
+//                     src={Logo}
+//                     width={150} // pixel values, not 0-1 scale
+//                     height={100} // adjust height to match your logo ratio
+//                     alt="Narxu Logo"
+//                     className="w-full h-full object-contain"
+//                     priority
+//                   />
+//                 </div>
+//               </Link>
+
+//               {/* Desktop Navigation */}
+//               <div className="hidden md:flex items-center space-x-8">
+//                 {navigation.map((item) =>
+//                   item.href.startsWith("/") ? (
+//                     <Link
+//                       key={item.name}
+//                       href={item.href}
+//                       className="text-white/80 hover:text-white hover:scale-105 transition-all duration-200 font-medium cursor-pointer"
+//                     >
+//                       {item.name}
+//                     </Link>
+//                   ) : (
+//                     <button
+//                       key={item.name}
+//                       onClick={() => scrollToSection(item.href)}
+//                       className="text-white/80 hover:text-white hover:scale-105 transition-all duration-200 font-medium cursor-pointer"
+//                     >
+//                       {item.name}
+//                     </button>
+//                   )
+//                 )}
+//               </div>
+
+//               {/* Desktop CTA Button */}
+//               <div className="hidden md:block">
+//                 <button
+//                   className="relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-2 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group"
+//                   onClick={() => scrollToSection("#contact")}
+//                 >
+//                   <span className="mr-2">Get Started</span>
+//                   <ArrowRight
+//                     size={16}
+//                     className="transition-transform duration-300 group-hover:translate-x-1"
+//                   />
+//                 </button>
+//               </div>
+
+//               {/* Mobile Menu Button */}
+//               <button
+//                 onClick={() => setIsOpen(!isOpen)}
+//                 className="md:hidden text-white hover:scale-110 transition-transform duration-200 cursor-pointer"
+//               >
+//                 <div className="relative w-6 h-6">
+//                   <Menu
+//                     size={24}
+//                     className={`absolute inset-0 transition-all duration-300 ${
+//                       isOpen
+//                         ? "opacity-0 rotate-180 scale-75"
+//                         : "opacity-100 rotate-0 scale-100"
+//                     }`}
+//                   />
+//                   <X
+//                     size={24}
+//                     className={`absolute inset-0 transition-all duration-300 ${
+//                       isOpen
+//                         ? "opacity-100 rotate-0 scale-100"
+//                         : "opacity-0 -rotate-180 scale-75"
+//                     }`}
+//                   />
+//                 </div>
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div className="md:hidden relative">
+//           {/* Backdrop overlay */}
+//           <div
+//             className={`fixed inset-0 bg-black/20 backdrop-blur-sm transition-all duration-300 ${
+//               isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+//             }`}
+//             onClick={() => setIsOpen(false)}
+//             style={{ top: "0", left: "0", right: "0", bottom: "0", zIndex: -1 }}
+//           />
+
+//           {/* Menu container */}
+//           <div
+//             className={`mt-2 w-[90vw] max-w-xs mx-auto transition-all duration-500 ease-out transform-gpu ${
+//               isOpen
+//                 ? "opacity-100 translate-y-0 scale-100"
+//                 : "opacity-0 -translate-y-8 scale-95 pointer-events-none"
+//             }`}
+//           >
+//             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl">
+//               <div className="flex flex-col space-y-1">
+//                 {navigation.map((item, index) =>
+//                   item.href.startsWith("/") ? (
+//                     <Link
+//                       key={item.name}
+//                       href={item.href}
+//                       className={`text-white/80 hover:text-white hover:bg-white/10 rounded-lg px-3 py-3 text-left transition-all duration-300 font-medium cursor-pointer transform hover:scale-[1.02] hover:translate-x-1 ${
+//                         isOpen ? "animate-mobile-menu-item" : ""
+//                       }`}
+//                       style={{
+//                         animationDelay: isOpen
+//                           ? `${index * 80 + 100}ms`
+//                           : "0ms",
+//                       }}
+//                       onClick={() => setIsOpen(false)}
+//                     >
+//                       {item.name}
+//                     </Link>
+//                   ) : (
+//                     <button
+//                       key={item.name}
+//                       onClick={() => scrollToSection(item.href)}
+//                       className={`text-white/80 hover:text-white hover:bg-white/10 rounded-lg px-3 py-3 text-left transition-all duration-300 font-medium cursor-pointer transform hover:scale-[1.02] hover:translate-x-1 ${
+//                         isOpen ? "animate-mobile-menu-item" : ""
+//                       }`}
+//                       style={{
+//                         animationDelay: isOpen
+//                           ? `${index * 80 + 100}ms`
+//                           : "0ms",
+//                       }}
+//                     >
+//                       {item.name}
+//                     </button>
+//                   )
+//                 )}
+//                 <div className="h-px bg-white/10 my-2" />
+//                 <button
+//                   className={`relative bg-white hover:bg-gray-50 text-black font-medium px-6 py-3 rounded-full flex items-center transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group transform ${
+//                     isOpen ? "animate-mobile-menu-item" : ""
+//                   }`}
+//                   style={{
+//                     animationDelay: isOpen
+//                       ? `${navigation.length * 80 + 150}ms`
+//                       : "0ms",
+//                   }}
+//                   onClick={() => scrollToSection("#contact")}
+//                 >
+//                   <span className="mr-2">Get Started</span>
+//                   <ArrowRight
+//                     size={16}
+//                     className="transition-transform duration-300 group-hover:translate-x-1"
+//                   />
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </nav>
+//     </>
+//   );
+// }

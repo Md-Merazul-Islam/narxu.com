@@ -1,0 +1,1239 @@
+{
+  "services": [
+    {
+      "id": "ai-chatbot",
+      "title": "AI Chatbot Development",
+      "shortDescription": "24/7 intelligent chatbots handling customer inquiries with 95% accuracy",
+      "heroDescription": "Never miss a lead with intelligent AI chatbots that handle unlimited conversations automatically across WhatsApp, Messenger, and your website.",
+      "category": "AI Solutions",
+      "icon": "MessageSquare",
+      "color": "from-purple-500 to-violet-600",
+      "stats": {
+        "accuracy": "95%",
+        "responseTime": "<2 sec",
+        "availability": "24/7",
+        "languages": "50+"
+      },
+      "features": [
+        {
+          "title": "WhatsApp & Messenger Integration",
+          "description": "Respond instantly to customer inquiries from WhatsApp, Facebook Messenger, and Instagram DMs. Never leave a customer waiting again.",
+          "icon": "MessageCircle"
+        },
+        {
+          "title": "Website Chat Widget",
+          "description": "Engage website visitors directly with our AI chat widget. Provide instant answers about inventory, pricing, and availability in real-time.",
+          "icon": "Globe"
+        },
+        {
+          "title": "Lead Qualification",
+          "description": "Automatically identify high-intent buyers, capture budget range, vehicle preferences, and trade-in details before your team gets involved.",
+          "icon": "Target"
+        },
+        {
+          "title": "Phone Calls 24/7",
+          "description": "Handle unlimited inbound calls around the clock. Answer questions, book test drives, and qualify leads even after hours.",
+          "icon": "Phone"
+        },
+        {
+          "title": "Email & SMS Automation",
+          "description": "Automatically respond to email inquiries and text messages. Keep conversations flowing across every channel your customers prefer.",
+          "icon": "Mail"
+        },
+        {
+          "title": "Instant Booking",
+          "description": "Schedule test drives and appointments, send reminders automatically. Sync with your calendar and send confirmations instantly.",
+          "icon": "Calendar"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "MESSAGING",
+          "title": "Respond to every message",
+          "highlight": "instantly, 24/7",
+          "description": "Narxu handles all your WhatsApp, Messenger, and Instagram DM conversations automatically. Never miss a lead, even after hours or during busy times.",
+          "bullets": [
+            "Respond instantly to customer inquiries across WhatsApp, Facebook Messenger, and Instagram DMs. Handle unlimited conversations simultaneously with consistent, professional responses that book test drives and qualify leads automatically.",
+            "Capture complete customer information including vehicle preferences, budget range, trade-in details, and contact information. Every conversation is logged with full history, so your sales team never asks too many questions.",
+            "Deliver customer-led, on-brand responses that enhance your dealership's reputation. Customers receive instant, helpful answers that feel personal and professional, building trust from the first message."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "VOICE CALLS",
+          "title": "Answer every call",
+          "highlight": "instantly, 24/7",
+          "description": "Never miss a lead with intelligent phone automation that handles unlimited calls around the clock. Book test drives, answer questions, and qualify leads automatically.",
+          "bullets": [
+            "Answer every call instantly with natural-sounding conversations that understand your inventory, pricing, and availability. Never lose a customer to voicemail again.",
+            "Book test drives, answer vehicle questions, provide pricing, and handle trade-in inquiries through natural phone conversations that feel completely human.",
+            "Get real-time insights on every call including customer intent, budget range, and vehicle preferences. Your sales team receives warm leads ready to close."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "LEAD MANAGEMENT",
+          "title": "Automate Lead",
+          "highlight": "Qualification & Routing",
+          "description": "Handle service appointments and parts inquiries automatically across all your sales channels - website, phone, and social media. Manage bookings, answer parts questions, and process orders seamlessly.",
+          "bullets": [
+            "Let AI automatically schedule service appointments and send confirmations across all channels - website, phone, and social media, customized to your workflow.",
+            "Answer customer questions about parts availability, pricing, and delivery times based on your inventory in real-time. Whether customers reach out via website, social media or phone calls.",
+            "Process parts orders and provide tracking updates without human intervention across every customer touchpoint tailored to your system."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳15,000",
+        "period": "month",
+        "includes": [
+          "Unlimited conversations",
+          "Multi-channel support",
+          "Analytics dashboard",
+          "24/7 availability"
+        ]
+      }
+    },
+    {
+      "id": "ai-model-building",
+      "title": "Custom AI Model Development",
+      "shortDescription": "Build tailored AI models trained on your specific business data and requirements",
+      "heroDescription": "Get custom AI models built specifically for your business needs, trained on your data for maximum accuracy and performance.",
+      "category": "AI Solutions",
+      "icon": "Brain",
+      "color": "from-blue-500 to-cyan-500",
+      "stats": {
+        "accuracy": "98%",
+        "trainingTime": "2-4 weeks",
+        "customization": "100%",
+        "support": "Dedicated"
+      },
+      "features": [
+        {
+          "title": "Custom Training",
+          "description": "Models trained exclusively on your business data for unmatched accuracy and relevance to your specific use cases.",
+          "icon": "Database"
+        },
+        {
+          "title": "Fine-Tuning",
+          "description": "Optimize pre-trained models with your domain expertise for faster deployment and better performance.",
+          "icon": "Sliders"
+        },
+        {
+          "title": "MLOps Pipeline",
+          "description": "Complete machine learning operations setup for continuous model improvement and monitoring.",
+          "icon": "GitBranch"
+        },
+        {
+          "title": "API Integration",
+          "description": "Easy-to-use APIs for seamless integration with your existing systems and workflows.",
+          "icon": "Code"
+        },
+        {
+          "title": "Performance Monitoring",
+          "description": "Real-time dashboards tracking model performance, accuracy, and usage metrics.",
+          "icon": "BarChart"
+        },
+        {
+          "title": "Scalable Infrastructure",
+          "description": "Cloud-native deployment that scales automatically with your business demands.",
+          "icon": "Cloud"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "DATA ANALYSIS",
+          "title": "Transform your data into",
+          "highlight": "intelligent insights",
+          "description": "We analyze your existing data to identify opportunities for AI automation and build models that deliver measurable business value.",
+          "bullets": [
+            "Comprehensive data audit to identify patterns, opportunities, and potential AI applications specific to your industry and business processes.",
+            "Clean, structure, and prepare your data for optimal model training with industry-leading data engineering practices.",
+            "Build proof-of-concept models to validate approach before full-scale development, ensuring you invest in solutions that work."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "MODEL TRAINING",
+          "title": "Custom models built for",
+          "highlight": "your specific needs",
+          "description": "Our AI engineers build and train models specifically designed for your business requirements, ensuring maximum accuracy and relevance.",
+          "bullets": [
+            "Select the optimal model architecture based on your use case - from transformer models for NLP to CNNs for image recognition.",
+            "Iterative training process with continuous evaluation and optimization to achieve the highest possible accuracy.",
+            "Rigorous testing across diverse scenarios to ensure reliable performance in real-world conditions."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DEPLOYMENT",
+          "title": "Seamless deployment with",
+          "highlight": "enterprise-grade reliability",
+          "description": "Deploy your custom AI models with confidence using our battle-tested infrastructure and continuous monitoring systems.",
+          "bullets": [
+            "One-click deployment to production with automatic scaling, load balancing, and failover capabilities.",
+            "Comprehensive monitoring dashboards tracking model performance, latency, and accuracy in real-time.",
+            "Regular model updates and retraining to maintain peak performance as your data evolves."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳50,000",
+        "period": "project",
+        "includes": [
+          "Requirements analysis",
+          "Custom model development",
+          "API integration",
+          "3 months support"
+        ]
+      }
+    },
+    {
+      "id": "ai-integration",
+      "title": "AI Integration Services",
+      "shortDescription": "Seamlessly integrate AI capabilities into your existing systems and workflows",
+      "heroDescription": "Connect powerful AI capabilities to your existing website, app, or business systems without rebuilding from scratch.",
+      "category": "AI Solutions",
+      "icon": "Puzzle",
+      "color": "from-green-500 to-emerald-500",
+      "stats": {
+        "integrationTime": "1-2 weeks",
+        "compatibility": "99%",
+        "uptime": "99.9%",
+        "apis": "100+"
+      },
+      "features": [
+        {
+          "title": "Website AI Integration",
+          "description": "Add intelligent chatbots, recommendation engines, and search capabilities to your existing website.",
+          "icon": "Globe"
+        },
+        {
+          "title": "CRM Integration",
+          "description": "Connect AI insights directly to your CRM for automated lead scoring and customer intelligence.",
+          "icon": "Users"
+        },
+        {
+          "title": "E-commerce AI",
+          "description": "Product recommendations, dynamic pricing, and inventory prediction for online stores.",
+          "icon": "ShoppingCart"
+        },
+        {
+          "title": "Document Processing",
+          "description": "Automated document analysis, data extraction, and intelligent document routing.",
+          "icon": "FileText"
+        },
+        {
+          "title": "Voice Integration",
+          "description": "Add voice commands and speech recognition to your applications and services.",
+          "icon": "Mic"
+        },
+        {
+          "title": "Analytics Enhancement",
+          "description": "AI-powered analytics providing predictive insights and anomaly detection.",
+          "icon": "TrendingUp"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "ASSESSMENT",
+          "title": "Understand your systems",
+          "highlight": "inside and out",
+          "description": "We thoroughly analyze your existing infrastructure to identify the best integration points and ensure seamless AI adoption.",
+          "bullets": [
+            "Complete technical audit of your current systems, APIs, and data flows to identify integration opportunities.",
+            "Security and compliance assessment to ensure AI integration meets your industry standards and regulations.",
+            "Performance baseline establishment to measure and demonstrate AI impact on your business metrics."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "INTEGRATION",
+          "title": "Connect AI to your",
+          "highlight": "existing workflows",
+          "description": "Our engineers implement AI capabilities that work seamlessly with your current tools and processes, requiring minimal changes to your operations.",
+          "bullets": [
+            "RESTful API connections that plug directly into your existing software stack without disrupting current operations.",
+            "Real-time data synchronization ensuring AI always works with the latest information from your systems.",
+            "Graceful fallback mechanisms that maintain business continuity even during rare AI service interruptions."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "OPTIMIZATION",
+          "title": "Continuous improvement for",
+          "highlight": "maximum ROI",
+          "description": "We don't just integrate and leave. Our team continuously monitors and optimizes AI performance to maximize your return on investment.",
+          "bullets": [
+            "Weekly performance reports showing AI impact on key business metrics and areas for improvement.",
+            "Proactive optimization based on usage patterns and feedback to continuously improve AI accuracy and speed.",
+            "Regular updates to AI models and integrations as your business evolves and new capabilities become available."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳25,000",
+        "period": "integration",
+        "includes": [
+          "System assessment",
+          "Custom integration",
+          "Testing & QA",
+          "1 month support"
+        ]
+      }
+    },
+    {
+      "id": "website-design",
+      "title": "Website Design",
+      "shortDescription": "Stunning, conversion-focused website designs that captivate visitors",
+      "heroDescription": "Beautiful, modern website designs that not only look amazing but convert visitors into customers.",
+      "category": "Web Development",
+      "icon": "Palette",
+      "color": "from-pink-500 to-rose-500",
+      "stats": {
+        "conversionBoost": "150%",
+        "designTime": "1-2 weeks",
+        "revisions": "Unlimited",
+        "responsive": "100%"
+      },
+      "features": [
+        {
+          "title": "UI/UX Design",
+          "description": "User-centered design that creates intuitive, enjoyable experiences for your visitors.",
+          "icon": "Layers"
+        },
+        {
+          "title": "Brand Identity",
+          "description": "Cohesive visual identity that reflects your brand values and resonates with your audience.",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Pixel-perfect designs that look stunning on every device, from mobile to desktop.",
+          "icon": "Smartphone"
+        },
+        {
+          "title": "Interactive Prototypes",
+          "description": "Clickable prototypes to test user flows and validate designs before development.",
+          "icon": "Play"
+        },
+        {
+          "title": "Design Systems",
+          "description": "Scalable design systems with reusable components for consistent brand experience.",
+          "icon": "Box"
+        },
+        {
+          "title": "Animation Design",
+          "description": "Micro-interactions and animations that delight users and enhance engagement.",
+          "icon": "Zap"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "DISCOVERY",
+          "title": "Understand your brand",
+          "highlight": "and audience",
+          "description": "We dive deep into your brand, competitors, and target audience to create designs that truly resonate.",
+          "bullets": [
+            "Comprehensive brand audit analyzing your existing identity, messaging, and visual elements.",
+            "Competitor analysis to identify opportunities for differentiation and industry best practices.",
+            "User research and persona development to ensure designs speak directly to your ideal customers."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DESIGN",
+          "title": "Craft stunning visuals",
+          "highlight": "that convert",
+          "description": "Our designers create beautiful, functional designs that guide visitors toward your business goals.",
+          "bullets": [
+            "Custom design concepts with multiple options to explore different creative directions.",
+            "Conversion-focused layouts with clear visual hierarchy and strategic call-to-action placement.",
+            "Accessibility-first approach ensuring your website works beautifully for all users."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DELIVERY",
+          "title": "Ready for development",
+          "highlight": "and beyond",
+          "description": "We deliver comprehensive design assets and documentation for seamless implementation.",
+          "bullets": [
+            "Developer-ready Figma files with organized layers, components, and design tokens.",
+            "Complete design system documentation for consistent future updates and expansions.",
+            "Asset export in all required formats optimized for web performance."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳20,000",
+        "period": "project",
+        "includes": [
+          "Brand analysis",
+          "3 design concepts",
+          "Unlimited revisions",
+          "Source files"
+        ]
+      }
+    },
+    {
+      "id": "website-development",
+      "title": "Website Development",
+      "shortDescription": "Fast, secure, and scalable websites built with cutting-edge technology",
+      "heroDescription": "Transform designs into high-performance websites that load fast, rank well, and scale with your business.",
+      "category": "Web Development",
+      "icon": "Code2",
+      "color": "from-orange-500 to-amber-500",
+      "stats": {
+        "loadTime": "<1.5s",
+        "seoScore": "95+",
+        "uptime": "99.9%",
+        "support": "24/7"
+      },
+      "features": [
+        {
+          "title": "Custom Development",
+          "description": "Bespoke websites built from scratch to match your exact requirements and specifications.",
+          "icon": "Wrench"
+        },
+        {
+          "title": "CMS Integration",
+          "description": "Easy-to-use content management systems for effortless website updates and management.",
+          "icon": "Edit"
+        },
+        {
+          "title": "E-commerce",
+          "description": "Full-featured online stores with secure payments, inventory management, and shipping integration.",
+          "icon": "ShoppingBag"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Lightning-fast websites optimized for Core Web Vitals and search engine rankings.",
+          "icon": "Gauge"
+        },
+        {
+          "title": "Security",
+          "description": "Enterprise-grade security with SSL, DDoS protection, and regular security audits.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Analytics Integration",
+          "description": "Comprehensive tracking setup to measure and optimize website performance.",
+          "icon": "LineChart"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "PLANNING",
+          "title": "Architecture that",
+          "highlight": "scales with you",
+          "description": "We plan every technical detail to ensure your website performs flawlessly as your business grows.",
+          "bullets": [
+            "Detailed technical specification defining architecture, technology stack, and integration requirements.",
+            "Database design and API planning for efficient data management and third-party connections.",
+            "Performance budget establishment to guarantee fast load times and excellent user experience."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DEVELOPMENT",
+          "title": "Clean code that",
+          "highlight": "performs beautifully",
+          "description": "Our developers write maintainable, efficient code following industry best practices and modern standards.",
+          "bullets": [
+            "Component-based architecture for reusable, maintainable code that's easy to update and extend.",
+            "Progressive enhancement ensuring your site works for all users regardless of browser or device.",
+            "Automated testing and continuous integration for reliable, bug-free deployments."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "LAUNCH",
+          "title": "Deployment and",
+          "highlight": "ongoing support",
+          "description": "We handle the entire launch process and provide ongoing support to keep your website running smoothly.",
+          "bullets": [
+            "Zero-downtime deployment with automatic rollback capabilities for risk-free launches.",
+            "Comprehensive monitoring setup tracking uptime, performance, and security threats 24/7.",
+            "Ongoing maintenance and support with regular updates, backups, and performance optimization."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳35,000",
+        "period": "project",
+        "includes": [
+          "Custom development",
+          "CMS setup",
+          "SEO optimization",
+          "3 months hosting"
+        ]
+      }
+    },
+    {
+      "id": "startup-platform",
+      "title": "Startup Business Platform",
+      "shortDescription": "Complete digital presence for startups to showcase and scale their business",
+      "heroDescription": "Launch your startup with a professional platform that showcases your vision and attracts investors and customers.",
+      "category": "Web Development",
+      "icon": "Rocket",
+      "color": "from-indigo-500 to-purple-500",
+      "stats": {
+        "launchTime": "2-3 weeks",
+        "investorReady": "100%",
+        "scalability": "Unlimited",
+        "features": "50+"
+      },
+      "features": [
+        {
+          "title": "Pitch Deck Website",
+          "description": "Compelling landing pages that tell your startup story and convert visitors into customers or investors.",
+          "icon": "Presentation"
+        },
+        {
+          "title": "MVP Development",
+          "description": "Rapid minimum viable product development to validate your idea and attract early adopters.",
+          "icon": "Lightbulb"
+        },
+        {
+          "title": "Investor Portal",
+          "description": "Secure portals for sharing documents, updates, and metrics with potential and current investors.",
+          "icon": "Briefcase"
+        },
+        {
+          "title": "User Dashboard",
+          "description": "Beautiful dashboards for your users to manage their accounts and track their activity.",
+          "icon": "LayoutDashboard"
+        },
+        {
+          "title": "Payment Integration",
+          "description": "Seamless payment processing with support for subscriptions, one-time payments, and invoicing.",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "Growth Tools",
+          "description": "Built-in tools for email marketing, referrals, and user engagement to accelerate growth.",
+          "icon": "TrendingUp"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "FOUNDATION",
+          "title": "Build your startup",
+          "highlight": "on solid ground",
+          "description": "We help you establish a strong technical foundation that supports rapid iteration and growth.",
+          "bullets": [
+            "Technology stack selection optimized for your specific use case, budget, and scaling requirements.",
+            "Modular architecture that allows rapid feature development and easy pivoting as you learn.",
+            "Infrastructure setup with auto-scaling, monitoring, and cost optimization built in from day one."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "MVP",
+          "title": "Launch fast and",
+          "highlight": "learn faster",
+          "description": "Get your minimum viable product to market quickly so you can start learning from real users.",
+          "bullets": [
+            "Prioritized feature development focusing on core value proposition and essential user journeys.",
+            "Rapid iteration cycles with weekly releases and continuous feedback integration.",
+            "Built-in analytics to track user behavior and identify opportunities for improvement."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "SCALE",
+          "title": "Grow without",
+          "highlight": "growing pains",
+          "description": "As your startup succeeds, your platform scales seamlessly to handle increased demand and complexity.",
+          "bullets": [
+            "Auto-scaling infrastructure that handles traffic spikes without manual intervention or downtime.",
+            "Performance optimization ensuring fast, reliable experience even as your user base grows exponentially.",
+            "Feature expansion support with architecture designed for easy addition of new capabilities."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳75,000",
+        "period": "project",
+        "includes": [
+          "Full platform build",
+          "Payment integration",
+          "User dashboard",
+          "6 months support"
+        ]
+      }
+    },
+    {
+      "id": "seo-optimization",
+      "title": "SEO Optimization",
+      "shortDescription": "Dominate search results and drive organic traffic to your website",
+      "heroDescription": "Climb to the top of search results with data-driven SEO strategies that deliver measurable results.",
+      "category": "Digital Marketing",
+      "icon": "Search",
+      "color": "from-teal-500 to-cyan-500",
+      "stats": {
+        "trafficIncrease": "200%+",
+        "keywordsRanked": "100+",
+        "timeToResults": "3-6 months",
+        "roiAverage": "500%"
+      },
+      "features": [
+        {
+          "title": "Technical SEO",
+          "description": "Complete technical optimization including site speed, mobile-friendliness, and crawlability.",
+          "icon": "Settings"
+        },
+        {
+          "title": "Keyword Research",
+          "description": "Data-driven keyword strategy targeting high-intent searches in your market.",
+          "icon": "Search"
+        },
+        {
+          "title": "Content Strategy",
+          "description": "SEO-optimized content planning and creation that attracts and engages your target audience.",
+          "icon": "FileText"
+        },
+        {
+          "title": "Link Building",
+          "description": "White-hat link acquisition strategies to build domain authority and trust.",
+          "icon": "Link"
+        },
+        {
+          "title": "Local SEO",
+          "description": "Dominate local search results and Google Maps for location-based businesses.",
+          "icon": "MapPin"
+        },
+        {
+          "title": "Analytics & Reporting",
+          "description": "Comprehensive tracking and monthly reports showing rankings, traffic, and conversions.",
+          "icon": "PieChart"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "AUDIT",
+          "title": "Discover what's holding",
+          "highlight": "you back",
+          "description": "We conduct a comprehensive SEO audit to identify issues and opportunities across your entire digital presence.",
+          "bullets": [
+            "200+ point technical audit covering site speed, mobile optimization, indexing, and crawl issues.",
+            "Competitor analysis revealing their strategies, keywords, and backlinks you can leverage.",
+            "Content gap analysis identifying high-value topics and keywords you're missing."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "OPTIMIZATION",
+          "title": "Implement changes that",
+          "highlight": "drive results",
+          "description": "Our team executes proven optimization strategies across technical, on-page, and off-page SEO.",
+          "bullets": [
+            "Technical fixes addressing all critical issues from page speed to schema markup implementation.",
+            "On-page optimization including title tags, meta descriptions, headings, and content enhancements.",
+            "Authority building through strategic link acquisition, brand mentions, and digital PR."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "GROWTH",
+          "title": "Continuous improvement for",
+          "highlight": "long-term success",
+          "description": "SEO is a marathon, not a sprint. We continuously monitor, adjust, and optimize to maintain and improve rankings.",
+          "bullets": [
+            "Monthly ranking reports tracking progress across all target keywords and competitor movements.",
+            "Algorithm update monitoring with rapid response to maintain rankings through Google changes.",
+            "Quarterly strategy reviews adjusting focus based on results and emerging opportunities."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳10,000",
+        "period": "month",
+        "includes": [
+          "Technical audit",
+          "On-page optimization",
+          "Monthly reporting",
+          "Keyword tracking"
+        ]
+      }
+    },
+    {
+      "id": "app-development",
+      "title": "Mobile App Development",
+      "shortDescription": "Native and cross-platform apps that users love and businesses rely on",
+      "heroDescription": "Build powerful mobile applications for iOS and Android that deliver exceptional user experiences.",
+      "category": "App Development",
+      "icon": "Smartphone",
+      "color": "from-violet-500 to-fuchsia-500",
+      "stats": {
+        "appStoreRating": "4.8+",
+        "developmentTime": "8-12 weeks",
+        "platforms": "iOS & Android",
+        "downloads": "50K+"
+      },
+      "features": [
+        {
+          "title": "Native Development",
+          "description": "Pure native apps for iOS and Android delivering the best possible performance and UX.",
+          "icon": "Smartphone"
+        },
+        {
+          "title": "Cross-Platform",
+          "description": "React Native and Flutter apps for faster development while maintaining native experience.",
+          "icon": "Repeat"
+        },
+        {
+          "title": "UI/UX Design",
+          "description": "Beautiful, intuitive interfaces following platform guidelines and best practices.",
+          "icon": "Palette"
+        },
+        {
+          "title": "Backend Development",
+          "description": "Scalable backend infrastructure to power your app's features and data needs.",
+          "icon": "Server"
+        },
+        {
+          "title": "Push Notifications",
+          "description": "Engage users with targeted push notifications and in-app messaging.",
+          "icon": "Bell"
+        },
+        {
+          "title": "App Store Optimization",
+          "description": "Optimize listings for maximum visibility and downloads in app stores.",
+          "icon": "Star"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "DESIGN",
+          "title": "Create experiences users",
+          "highlight": "can't put down",
+          "description": "We design mobile experiences that feel natural, intuitive, and delightful to use.",
+          "bullets": [
+            "User journey mapping to understand and optimize every touchpoint in your app experience.",
+            "Platform-specific design following iOS Human Interface and Material Design guidelines.",
+            "Interactive prototypes for user testing and stakeholder approval before development begins."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DEVELOPMENT",
+          "title": "Build apps that",
+          "highlight": "perform flawlessly",
+          "description": "Our developers craft clean, efficient code that delivers smooth performance across all devices.",
+          "bullets": [
+            "Modular architecture enabling rapid feature development and easy maintenance over time.",
+            "Offline-first approach ensuring your app works reliably even with poor connectivity.",
+            "Rigorous testing across devices, OS versions, and network conditions for release confidence."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "LAUNCH",
+          "title": "Get your app into",
+          "highlight": "users' hands",
+          "description": "We handle the entire app store submission process and help you acquire your first users.",
+          "bullets": [
+            "Complete app store submission handling review requirements, metadata, and screenshots.",
+            "Launch marketing support including ASO, press outreach, and social media campaigns.",
+            "Post-launch monitoring tracking crashes, performance, and user feedback for rapid iteration."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳100,000",
+        "period": "project",
+        "includes": [
+          "iOS & Android",
+          "Backend API",
+          "Admin panel",
+          "App store submission"
+        ]
+      }
+    },
+    {
+      "id": "software-maintenance",
+      "title": "Software Maintenance & Updates",
+      "shortDescription": "Keep your software running smoothly with expert maintenance and updates",
+      "heroDescription": "Ensure your software stays secure, performant, and up-to-date with our comprehensive maintenance services.",
+      "category": "Support Services",
+      "icon": "Wrench",
+      "color": "from-slate-500 to-gray-600",
+      "stats": {
+        "uptime": "99.99%",
+        "responseTime": "<1 hour",
+        "bugFixTime": "<24 hours",
+        "updates": "Weekly"
+      },
+      "features": [
+        {
+          "title": "Bug Fixes",
+          "description": "Rapid identification and resolution of software bugs and issues affecting your users.",
+          "icon": "Bug"
+        },
+        {
+          "title": "Security Updates",
+          "description": "Regular security patches and vulnerability assessments to protect your data.",
+          "icon": "Shield"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Continuous performance monitoring and optimization for faster, more efficient software.",
+          "icon": "Gauge"
+        },
+        {
+          "title": "Feature Updates",
+          "description": "Regular feature enhancements and improvements based on user feedback and analytics.",
+          "icon": "Plus"
+        },
+        {
+          "title": "Database Maintenance",
+          "description": "Database optimization, cleanup, and backup management for data integrity.",
+          "icon": "Database"
+        },
+        {
+          "title": "Documentation",
+          "description": "Comprehensive documentation updates keeping technical guides current and accurate.",
+          "icon": "BookOpen"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "MONITORING",
+          "title": "Watch your systems",
+          "highlight": "around the clock",
+          "description": "Our monitoring systems detect issues before they impact your users, enabling proactive problem resolution.",
+          "bullets": [
+            "24/7 automated monitoring tracking uptime, performance, errors, and security threats in real-time.",
+            "Intelligent alerting that distinguishes between critical issues and routine fluctuations.",
+            "Performance trending to identify gradual degradation before it becomes a problem."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "MAINTENANCE",
+          "title": "Keep your software",
+          "highlight": "running smoothly",
+          "description": "Regular maintenance keeps your software healthy, preventing small issues from becoming big problems.",
+          "bullets": [
+            "Scheduled maintenance windows for updates, optimizations, and preventive care with zero downtime.",
+            "Dependency management keeping all libraries, frameworks, and tools current and secure.",
+            "Database optimization including query tuning, index management, and storage cleanup."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "UPDATES",
+          "title": "Evolve your software",
+          "highlight": "continuously",
+          "description": "Regular updates keep your software competitive, secure, and aligned with user needs.",
+          "bullets": [
+            "Monthly feature releases based on user feedback, analytics insights, and business priorities.",
+            "Seamless update deployment with rollback capabilities ensuring risk-free releases.",
+            "Clear release notes and user communication keeping stakeholders informed of changes."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳8,000",
+        "period": "month",
+        "includes": [
+          "24/7 monitoring",
+          "Bug fixes",
+          "Security updates",
+          "Monthly reports"
+        ]
+      }
+    },
+    {
+      "id": "24-7-support",
+      "title": "24/7 Technical Support",
+      "shortDescription": "Round-the-clock expert support for all your technical needs",
+      "heroDescription": "Get instant access to expert technical support whenever you need it, day or night.",
+      "category": "Support Services",
+      "icon": "Headphones",
+      "color": "from-red-500 to-orange-500",
+      "stats": {
+        "availability": "24/7/365",
+        "responseTime": "<15 min",
+        "satisfaction": "98%",
+        "experts": "50+"
+      },
+      "features": [
+        {
+          "title": "Live Chat Support",
+          "description": "Instant messaging with technical experts for quick questions and issue resolution.",
+          "icon": "MessageSquare"
+        },
+        {
+          "title": "Phone Support",
+          "description": "Direct phone access to senior engineers for complex issues requiring real-time collaboration.",
+          "icon": "Phone"
+        },
+        {
+          "title": "Email Tickets",
+          "description": "Detailed ticket system for non-urgent issues with full tracking and documentation.",
+          "icon": "Mail"
+        },
+        {
+          "title": "Screen Sharing",
+          "description": "Remote assistance with screen sharing for hands-on troubleshooting and guidance.",
+          "icon": "Monitor"
+        },
+        {
+          "title": "Emergency Response",
+          "description": "Critical issue escalation path for production emergencies requiring immediate attention.",
+          "icon": "AlertTriangle"
+        },
+        {
+          "title": "Knowledge Base",
+          "description": "Comprehensive self-service documentation for common questions and tutorials.",
+          "icon": "Book"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "AVAILABILITY",
+          "title": "Help when you",
+          "highlight": "need it most",
+          "description": "Our global support team ensures expert assistance is always just a message or call away.",
+          "bullets": [
+            "Follow-the-sun coverage with teams across time zones providing true 24/7 availability.",
+            "Multiple contact channels including chat, phone, email, and emergency hotline.",
+            "Holiday and weekend coverage maintaining the same response times year-round."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "EXPERTISE",
+          "title": "Real experts solving",
+          "highlight": "real problems",
+          "description": "Our support team consists of experienced engineers who understand your technology stack deeply.",
+          "bullets": [
+            "Specialized expertise across web, mobile, AI, cloud, and database technologies.",
+            "Direct access to the developers who built your system for complex technical issues.",
+            "Continuous training keeping our team current with the latest technologies and best practices."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "RESOLUTION",
+          "title": "Fast, permanent",
+          "highlight": "solutions",
+          "description": "We don't just fix symptoms—we identify root causes and implement lasting solutions.",
+          "bullets": [
+            "Thorough issue investigation identifying underlying causes, not just surface symptoms.",
+            "Clear documentation of issues and resolutions for future reference and prevention.",
+            "Post-incident reviews for significant issues with actionable recommendations to prevent recurrence."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳5,000",
+        "period": "month",
+        "includes": [
+          "24/7 availability",
+          "15-min response",
+          "Unlimited tickets",
+          "Priority escalation"
+        ]
+      }
+    },
+    {
+      "id": "lead-generation",
+      "title": "Lead Generation",
+      "shortDescription": "Fill your pipeline with qualified leads ready to convert",
+      "heroDescription": "Generate a steady stream of high-quality leads through targeted campaigns and proven strategies.",
+      "category": "Digital Marketing",
+      "icon": "Target",
+      "color": "from-yellow-500 to-orange-500",
+      "stats": {
+        "leadsGenerated": "500+/month",
+        "conversionRate": "15%+",
+        "costPerLead": "-40%",
+        "roi": "300%+"
+      },
+      "features": [
+        {
+          "title": "Landing Pages",
+          "description": "High-converting landing pages designed specifically for lead capture and nurturing.",
+          "icon": "Layout"
+        },
+        {
+          "title": "Lead Magnets",
+          "description": "Valuable content offers that attract and capture qualified prospects.",
+          "icon": "Gift"
+        },
+        {
+          "title": "Email Campaigns",
+          "description": "Automated email sequences that nurture leads from awareness to purchase.",
+          "icon": "Send"
+        },
+        {
+          "title": "Paid Advertising",
+          "description": "Targeted ad campaigns on Google, Facebook, LinkedIn, and other platforms.",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "CRM Integration",
+          "description": "Seamless integration with your CRM for automatic lead capture and scoring.",
+          "icon": "Database"
+        },
+        {
+          "title": "Analytics & Optimization",
+          "description": "Continuous testing and optimization to improve lead quality and reduce costs.",
+          "icon": "TrendingUp"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "STRATEGY",
+          "title": "Find your ideal",
+          "highlight": "customers",
+          "description": "We develop targeted strategies to reach the people most likely to become your customers.",
+          "bullets": [
+            "Ideal customer profile development based on your best existing customers and market opportunity.",
+            "Channel selection identifying where your prospects spend time and how to reach them effectively.",
+            "Competitive positioning differentiating your offer to stand out in crowded markets."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "CAMPAIGNS",
+          "title": "Capture attention and",
+          "highlight": "convert",
+          "description": "Our campaigns combine compelling creative with precision targeting to generate qualified leads.",
+          "bullets": [
+            "Multi-channel campaigns reaching prospects across search, social, display, and email.",
+            "A/B testing of messaging, creative, and offers to continuously improve performance.",
+            "Lead scoring to prioritize the most sales-ready prospects for your team."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "NURTURE",
+          "title": "Turn leads into",
+          "highlight": "customers",
+          "description": "Automated nurture sequences build trust and guide leads toward purchase decisions.",
+          "bullets": [
+            "Personalized email sequences tailored to prospect behavior, interests, and stage in the buyer journey.",
+            "Retargeting campaigns keeping your brand top-of-mind for prospects not yet ready to buy.",
+            "Sales enablement with qualified lead handoff including full context and engagement history."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳15,000",
+        "period": "month",
+        "includes": [
+          "Strategy development",
+          "Landing pages",
+          "Ad campaigns",
+          "Monthly optimization"
+        ]
+      }
+    },
+    {
+      "id": "video-editing",
+      "title": "Video Editing & Production",
+      "shortDescription": "Professional video content that engages and converts your audience",
+      "heroDescription": "Create stunning video content that tells your story and drives engagement across all platforms.",
+      "category": "Digital Marketing",
+      "icon": "Video",
+      "color": "from-rose-500 to-pink-500",
+      "stats": {
+        "turnaround": "48-72 hrs",
+        "formats": "All platforms",
+        "revisions": "3 included",
+        "quality": "4K+"
+      },
+      "features": [
+        {
+          "title": "Social Media Videos",
+          "description": "Platform-optimized videos for TikTok, Instagram, YouTube, and LinkedIn.",
+          "icon": "Share2"
+        },
+        {
+          "title": "Promotional Videos",
+          "description": "Compelling promotional content that showcases your products and services.",
+          "icon": "Play"
+        },
+        {
+          "title": "Explainer Videos",
+          "description": "Clear, engaging explainer videos that simplify complex topics for your audience.",
+          "icon": "HelpCircle"
+        },
+        {
+          "title": "Motion Graphics",
+          "description": "Eye-catching animations and motion graphics that elevate your brand.",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Video Ads",
+          "description": "High-converting video advertisements optimized for paid campaigns.",
+          "icon": "Film"
+        },
+        {
+          "title": "Testimonials",
+          "description": "Professional customer testimonial videos that build trust and credibility.",
+          "icon": "Users"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "PLANNING",
+          "title": "Craft your video",
+          "highlight": "strategy",
+          "description": "We develop a video strategy aligned with your goals, audience, and brand identity.",
+          "bullets": [
+            "Content calendar planning with video topics, formats, and publishing schedule.",
+            "Script and storyboard development ensuring clear messaging and visual flow.",
+            "Platform optimization strategy for maximum reach and engagement on each channel."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "PRODUCTION",
+          "title": "Professional editing",
+          "highlight": "that stands out",
+          "description": "Our editors transform raw footage into polished, professional content that captivates viewers.",
+          "bullets": [
+            "Expert editing including cuts, transitions, color grading, and pacing optimization.",
+            "Custom graphics, lower thirds, and branded elements consistent with your visual identity.",
+            "Audio enhancement including music selection, sound effects, and voice-over integration."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "DELIVERY",
+          "title": "Ready for every",
+          "highlight": "platform",
+          "description": "We deliver your videos optimized for every platform and use case you need.",
+          "bullets": [
+            "Multiple format exports optimized for each platform's specifications and best practices.",
+            "Thumbnail creation for YouTube, social media, and website video players.",
+            "Subtitle and caption files for accessibility and silent autoplay engagement."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳5,000",
+        "period": "video",
+        "includes": [
+          "Professional editing",
+          "Music & effects",
+          "3 revisions",
+          "All format exports"
+        ]
+      }
+    },
+    {
+      "id": "digital-marketing",
+      "title": "Digital Marketing",
+      "shortDescription": "Comprehensive digital marketing strategies that drive growth",
+      "heroDescription": "Grow your business with data-driven digital marketing strategies across all channels.",
+      "category": "Digital Marketing",
+      "icon": "Megaphone",
+      "color": "from-emerald-500 to-green-500",
+      "stats": {
+        "roiIncrease": "250%+",
+        "reachGrowth": "400%",
+        "engagementBoost": "300%",
+        "clientsServed": "200+"
+      },
+      "features": [
+        {
+          "title": "Social Media Marketing",
+          "description": "Strategic social media management and advertising across all major platforms.",
+          "icon": "Share2"
+        },
+        {
+          "title": "Content Marketing",
+          "description": "Valuable content that attracts, engages, and converts your target audience.",
+          "icon": "FileText"
+        },
+        {
+          "title": "PPC Advertising",
+          "description": "Profitable pay-per-click campaigns on Google, Facebook, Instagram, and more.",
+          "icon": "MousePointerClick"
+        },
+        {
+          "title": "Email Marketing",
+          "description": "High-converting email campaigns that nurture leads and drive repeat business.",
+          "icon": "Mail"
+        },
+        {
+          "title": "Influencer Marketing",
+          "description": "Strategic partnerships with influencers to expand reach and build credibility.",
+          "icon": "Users"
+        },
+        {
+          "title": "Analytics & Reporting",
+          "description": "Comprehensive reporting showing ROI and insights for continuous improvement.",
+          "icon": "BarChart2"
+        }
+      ],
+      "sections": [
+        {
+          "badge": "STRATEGY",
+          "title": "Build your marketing",
+          "highlight": "roadmap",
+          "description": "We develop comprehensive marketing strategies tailored to your goals, audience, and budget.",
+          "bullets": [
+            "Market and competitor analysis to identify opportunities and position your brand effectively.",
+            "Channel strategy selecting the most effective platforms for reaching your target audience.",
+            "Budget allocation optimizing spend across channels for maximum ROI."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "EXECUTION",
+          "title": "Campaigns that",
+          "highlight": "deliver results",
+          "description": "Our team executes multi-channel campaigns with precision and creativity.",
+          "bullets": [
+            "Coordinated campaigns across social, search, email, and content for unified messaging.",
+            "Creative development including copy, visuals, and video optimized for each channel.",
+            "Continuous optimization with daily monitoring and weekly performance reviews."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        },
+        {
+          "badge": "GROWTH",
+          "title": "Scale what works",
+          "highlight": "eliminate what doesn't",
+          "description": "We use data to continuously refine strategies and scale successful campaigns.",
+          "bullets": [
+            "Comprehensive analytics tracking performance across all channels and campaigns.",
+            "Attribution modeling to understand which touchpoints drive conversions.",
+            "Quarterly strategy reviews adjusting approach based on results and market changes."
+          ],
+          "image": "/placeholder.svg?height=400&width=500"
+        }
+      ],
+      "pricing": {
+        "starting": "৳20,000",
+        "period": "month",
+        "includes": [
+          "Strategy development",
+          "Multi-channel campaigns",
+          "Content creation",
+          "Monthly reporting"
+        ]
+      }
+    }
+  ]
+}
