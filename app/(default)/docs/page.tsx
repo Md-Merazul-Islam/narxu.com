@@ -1,5 +1,5 @@
-import type { Metadata } from "next"
-import Link from "next/link"
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Book,
   Code,
@@ -13,31 +13,53 @@ import {
   Video,
   Download,
   ExternalLink,
-} from "lucide-react"
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Documentation | Cliste - AI Automation Guides & API Reference",
+  title: "Documentation | Narxu - AI Automation Guides & API Reference",
   description:
-    "Comprehensive documentation for Cliste AI automation platform. API reference, integration guides, tutorials, and best practices.",
-  keywords: ["documentation", "API reference", "integration guides", "AI tutorials", "Cliste"],
+    "Comprehensive documentation for Narxu AI automation platform. API reference, integration guides, tutorials, and best practices.",
+  keywords: [
+    "documentation",
+    "API reference",
+    "integration guides",
+    "AI tutorials",
+    "Narxu",
+  ],
   openGraph: {
-    title: "Documentation | Cliste",
-    description: "Comprehensive guides and API reference for Cliste AI platform.",
+    title: "Documentation | Narxu",
+    description:
+      "Comprehensive guides and API reference for Narxu AI platform.",
     type: "website",
   },
-}
+};
 
 const quickLinks = [
-  { icon: Zap, title: "Quick Start", description: "Get up and running in 5 minutes", href: "/docs/quick-start" },
-  { icon: Code, title: "API Reference", description: "Complete API documentation", href: "/docs/api" },
-  { icon: Settings, title: "Configuration", description: "Setup and customization guides", href: "/docs/config" },
+  {
+    icon: Zap,
+    title: "Quick Start",
+    description: "Get up and running in 5 minutes",
+    href: "/docs/quick-start",
+  },
+  {
+    icon: Code,
+    title: "API Reference",
+    description: "Complete API documentation",
+    href: "/docs/api",
+  },
+  {
+    icon: Settings,
+    title: "Configuration",
+    description: "Setup and customization guides",
+    href: "/docs/config",
+  },
   {
     icon: Shield,
     title: "Security",
     description: "Authentication and security best practices",
     href: "/docs/security",
   },
-]
+];
 
 const docCategories = [
   {
@@ -45,7 +67,7 @@ const docCategories = [
     title: "Getting Started",
     description: "Learn the basics and get your first AI agent running",
     articles: [
-      { title: "Introduction to Cliste", href: "/docs/intro" },
+      { title: "Introduction to Narxu", href: "/docs/intro" },
       { title: "Installation Guide", href: "/docs/installation" },
       { title: "Your First AI Agent", href: "/docs/first-agent" },
       { title: "Understanding Workflows", href: "/docs/workflows" },
@@ -67,7 +89,7 @@ const docCategories = [
   {
     icon: Webhook,
     title: "Integrations",
-    description: "Connect Cliste with your existing tools and platforms",
+    description: "Connect Narxu with your existing tools and platforms",
     articles: [
       { title: "Slack Integration", href: "/docs/integrations/slack" },
       { title: "Microsoft Teams", href: "/docs/integrations/teams" },
@@ -112,19 +134,38 @@ const docCategories = [
       { title: "Access Controls", href: "/docs/security/access" },
     ],
   },
-]
+];
 
 const resources = [
-  { icon: Video, title: "Video Tutorials", description: "Step-by-step video guides", href: "/docs/videos" },
-  { icon: FileText, title: "Changelog", description: "Latest updates and releases", href: "/docs/changelog" },
-  { icon: Download, title: "SDKs & Tools", description: "Download official SDKs", href: "/docs/sdks" },
-  { icon: ExternalLink, title: "GitHub", description: "Open source examples", href: "https://github.com/cliste" },
-]
+  {
+    icon: Video,
+    title: "Video Tutorials",
+    description: "Step-by-step video guides",
+    href: "/docs/videos",
+  },
+  {
+    icon: FileText,
+    title: "Changelog",
+    description: "Latest updates and releases",
+    href: "/docs/changelog",
+  },
+  {
+    icon: Download,
+    title: "SDKs & Tools",
+    description: "Download official SDKs",
+    href: "/docs/sdks",
+  },
+  {
+    icon: ExternalLink,
+    title: "GitHub",
+    description: "Open source examples",
+    href: "https://github.com/Narxu",
+  },
+];
 
 export default function DocsPage() {
   return (
     <>
-
       <div className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -134,11 +175,12 @@ export default function DocsPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Everything You Need
               <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                To Build with Cliste
+                To Build with Narxu
               </span>
             </h1>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Comprehensive guides, API reference, and tutorials to help you integrate AI automation into your business.
+              Comprehensive guides, API reference, and tutorials to help you
+              integrate AI automation into your business.
             </p>
           </div>
 
@@ -194,7 +236,9 @@ export default function DocsPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold">{category.title}</h3>
-                    <p className="text-white/50 text-sm">{category.description}</p>
+                    <p className="text-white/50 text-sm">
+                      {category.description}
+                    </p>
                   </div>
                 </div>
                 <ul className="space-y-2">
@@ -215,7 +259,9 @@ export default function DocsPage() {
 
           {/* Additional Resources */}
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold mb-6 text-center">Additional Resources</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Additional Resources
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {resources.map((resource, index) => (
                 <Link
@@ -225,7 +271,9 @@ export default function DocsPage() {
                 >
                   <resource.icon className="w-8 h-8 text-purple-400 mb-3 group-hover:scale-110 transition-transform" />
                   <h4 className="font-medium mb-1">{resource.title}</h4>
-                  <p className="text-white/50 text-xs">{resource.description}</p>
+                  <p className="text-white/50 text-xs">
+                    {resource.description}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -234,8 +282,12 @@ export default function DocsPage() {
           {/* Help Banner */}
           <div className="mt-12 bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Can't find what you're looking for?</h3>
-              <p className="text-white/60">Our support team is here to help you with any questions.</p>
+              <h3 className="text-xl font-semibold mb-2">
+                Can't find what you're looking for?
+              </h3>
+              <p className="text-white/60">
+                Our support team is here to help you with any questions.
+              </p>
             </div>
             <Link
               href="/support"
@@ -247,5 +299,5 @@ export default function DocsPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

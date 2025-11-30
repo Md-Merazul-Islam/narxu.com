@@ -1,5 +1,5 @@
-import type { Metadata } from "next"
-import Link from "next/link"
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
   Bot,
   MessageSquare,
@@ -19,26 +19,32 @@ import {
   Headphones,
   ArrowRight,
   CheckCircle,
-} from "lucide-react"
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Features | Cliste - AI Automation Platform Capabilities",
+  title: "Features | Narxu - AI Automation Platform Capabilities",
   description:
-    "Explore Cliste's powerful AI automation features. From intelligent chatbots to advanced analytics, discover tools that transform your business.",
-  keywords: ["AI features", "automation capabilities", "chatbot", "analytics", "Cliste"],
+    "Explore Narxu's powerful AI automation features. From intelligent chatbots to advanced analytics, discover tools that transform your business.",
+  keywords: [
+    "AI features",
+    "automation capabilities",
+    "chatbot",
+    "analytics",
+    "Narxu",
+  ],
   openGraph: {
-    title: "Features | Cliste",
+    title: "Features | Narxu",
     description: "Powerful AI automation features for modern businesses.",
     type: "website",
   },
-}
+};
 
 const heroFeatures = [
   { icon: Bot, label: "AI Agents", value: "Unlimited" },
   { icon: MessageSquare, label: "Conversations", value: "10M+" },
   { icon: Globe, label: "Languages", value: "100+" },
   { icon: Clock, label: "Uptime", value: "99.99%" },
-]
+];
 
 const mainFeatures = [
   {
@@ -59,7 +65,12 @@ const mainFeatures = [
     title: "Workflow Automation",
     description:
       "Automate complex business processes with intelligent workflows that adapt and learn from your operations.",
-    highlights: ["Visual workflow builder", "Conditional logic", "Multi-step automation", "Error handling"],
+    highlights: [
+      "Visual workflow builder",
+      "Conditional logic",
+      "Multi-step automation",
+      "Error handling",
+    ],
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -67,43 +78,98 @@ const mainFeatures = [
     title: "Advanced Analytics",
     description:
       "Gain actionable insights with comprehensive analytics dashboards and real-time performance monitoring.",
-    highlights: ["Real-time dashboards", "Custom reports", "Trend analysis", "Predictive insights"],
+    highlights: [
+      "Real-time dashboards",
+      "Custom reports",
+      "Trend analysis",
+      "Predictive insights",
+    ],
     gradient: "from-green-500 to-emerald-500",
   },
   {
     icon: Shield,
     title: "Enterprise Security",
-    description: "Bank-grade security with end-to-end encryption, SOC 2 compliance, and advanced access controls.",
-    highlights: ["End-to-end encryption", "SOC 2 Type II", "GDPR compliant", "SSO integration"],
+    description:
+      "Bank-grade security with end-to-end encryption, SOC 2 compliance, and advanced access controls.",
+    highlights: [
+      "End-to-end encryption",
+      "SOC 2 Type II",
+      "GDPR compliant",
+      "SSO integration",
+    ],
     gradient: "from-orange-500 to-red-500",
   },
-]
+];
 
 const allFeatures = [
-  { icon: Bot, title: "AI Chatbots", description: "24/7 intelligent customer support" },
-  { icon: MessageSquare, title: "Omnichannel Support", description: "Unified messaging across platforms" },
-  { icon: Database, title: "Knowledge Base", description: "Self-learning knowledge management" },
-  { icon: Zap, title: "Instant Responses", description: "Sub-second response times" },
-  { icon: Globe, title: "Multilingual", description: "Support in 100+ languages" },
+  {
+    icon: Bot,
+    title: "AI Chatbots",
+    description: "24/7 intelligent customer support",
+  },
+  {
+    icon: MessageSquare,
+    title: "Omnichannel Support",
+    description: "Unified messaging across platforms",
+  },
+  {
+    icon: Database,
+    title: "Knowledge Base",
+    description: "Self-learning knowledge management",
+  },
+  {
+    icon: Zap,
+    title: "Instant Responses",
+    description: "Sub-second response times",
+  },
+  {
+    icon: Globe,
+    title: "Multilingual",
+    description: "Support in 100+ languages",
+  },
   { icon: Lock, title: "Data Privacy", description: "Complete data ownership" },
-  { icon: LineChart, title: "Performance Metrics", description: "Detailed analytics and reporting" },
-  { icon: Users, title: "Team Collaboration", description: "Role-based access and permissions" },
-  { icon: Settings, title: "Custom Integrations", description: "API-first architecture" },
-  { icon: Headphones, title: "Human Handoff", description: "Seamless agent escalation" },
-  { icon: Sparkles, title: "AI Training", description: "Continuous learning and improvement" },
-  { icon: Clock, title: "Scheduling", description: "Automated appointment booking" },
-]
+  {
+    icon: LineChart,
+    title: "Performance Metrics",
+    description: "Detailed analytics and reporting",
+  },
+  {
+    icon: Users,
+    title: "Team Collaboration",
+    description: "Role-based access and permissions",
+  },
+  {
+    icon: Settings,
+    title: "Custom Integrations",
+    description: "API-first architecture",
+  },
+  {
+    icon: Headphones,
+    title: "Human Handoff",
+    description: "Seamless agent escalation",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Training",
+    description: "Continuous learning and improvement",
+  },
+  {
+    icon: Clock,
+    title: "Scheduling",
+    description: "Automated appointment booking",
+  },
+];
 
 const comparisons = [
-  { feature: "AI-Powered Responses", cliste: true, traditional: false },
-  { feature: "24/7 Availability", cliste: true, traditional: false },
-  { feature: "Multi-Language Support", cliste: true, traditional: false },
-  { feature: "Instant Scalability", cliste: true, traditional: false },
-  { feature: "Predictive Analytics", cliste: true, traditional: false },
-  { feature: "Self-Learning System", cliste: true, traditional: false },
-  { feature: "Human-Like Conversations", cliste: true, traditional: false },
-  { feature: "Zero Wait Times", cliste: true, traditional: false },
-]
+  { feature: "AI-Powered Responses", Narxu: true, traditional: false },
+  { feature: "24/7 Availability", Narxu: true, traditional: false },
+  { feature: "Multi-Language Support", Narxu: true, traditional: false },
+  { feature: "Instant Scalability", Narxu: true, traditional: false },
+  { feature: "Predictive Analytics", Narxu: true, traditional: false },
+  { feature: "Self-Learning System", Narxu: true, traditional: false },
+  { feature: "Human-Like Conversations", Narxu: true, traditional: false },
+  { feature: "Zero Wait Times", Narxu: true, traditional: false },
+];
 
 export default function FeaturesPage() {
   return (
@@ -122,14 +188,17 @@ export default function FeaturesPage() {
               </span>
             </h1>
             <p className="text-xl text-white/60 max-w-3xl mx-auto mb-12">
-              Everything you need to automate customer interactions, streamline operations, and deliver exceptional
-              experiences.
+              Everything you need to automate customer interactions, streamline
+              operations, and deliver exceptional experiences.
             </p>
 
             {/* Hero Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {heroFeatures.map((item, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4">
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4"
+                >
                   <item.icon className="w-6 h-6 text-purple-400 mx-auto mb-2" />
                   <div className="text-2xl font-bold">{item.value}</div>
                   <div className="text-white/50 text-sm">{item.label}</div>
@@ -155,10 +224,15 @@ export default function FeaturesPage() {
                       <feature.icon className="w-8 h-8 text-white" />
                     </div>
                     <h2 className="text-3xl font-bold mb-4">{feature.title}</h2>
-                    <p className="text-white/60 text-lg mb-6">{feature.description}</p>
+                    <p className="text-white/60 text-lg mb-6">
+                      {feature.description}
+                    </p>
                     <ul className="grid grid-cols-2 gap-3">
                       {feature.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-white/70">
+                        <li
+                          key={idx}
+                          className="flex items-center gap-2 text-white/70"
+                        >
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span className="text-sm">{highlight}</span>
                         </li>
@@ -166,9 +240,13 @@ export default function FeaturesPage() {
                     </ul>
                   </div>
                   <div
-                    className={`relative h-64 md:h-80 rounded-2xl overflow-hidden ${index % 2 === 1 ? "md:order-1" : ""}`}
+                    className={`relative h-64 md:h-80 rounded-2xl overflow-hidden ${
+                      index % 2 === 1 ? "md:order-1" : ""
+                    }`}
                   >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`}
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center">
                         <feature.icon className="w-16 h-16 text-white/60" />
@@ -182,7 +260,9 @@ export default function FeaturesPage() {
 
           {/* All Features Grid */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-12">All Features</h2>
+            <h2 className="text-3xl font-bold text-center mb-12">
+              All Features
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {allFeatures.map((feature, index) => (
                 <div
@@ -199,21 +279,31 @@ export default function FeaturesPage() {
 
           {/* Comparison Table */}
           <div className="mb-20">
-            <h2 className="text-3xl font-bold text-center mb-4">Why Choose Cliste?</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">
+              Why Choose Narxu?
+            </h2>
             <p className="text-white/60 text-center mb-12 max-w-2xl mx-auto">
-              See how our AI-powered platform compares to traditional customer service solutions.
+              See how our AI-powered platform compares to traditional customer
+              service solutions.
             </p>
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden max-w-3xl mx-auto">
               <div className="grid grid-cols-3 gap-4 p-6 border-b border-white/10 bg-white/5">
                 <div className="font-semibold">Feature</div>
-                <div className="font-semibold text-center text-purple-400">Cliste AI</div>
-                <div className="font-semibold text-center text-white/50">Traditional</div>
+                <div className="font-semibold text-center text-purple-400">
+                  Narxu AI
+                </div>
+                <div className="font-semibold text-center text-white/50">
+                  Traditional
+                </div>
               </div>
               {comparisons.map((item, index) => (
-                <div key={index} className="grid grid-cols-3 gap-4 p-6 border-b border-white/10 last:border-0">
+                <div
+                  key={index}
+                  className="grid grid-cols-3 gap-4 p-6 border-b border-white/10 last:border-0"
+                >
                   <div className="text-white/70">{item.feature}</div>
                   <div className="text-center">
-                    {item.cliste ? (
+                    {item.Narxu ? (
                       <CheckCircle className="w-5 h-5 text-green-400 mx-auto" />
                     ) : (
                       <span className="text-white/30">-</span>
@@ -233,9 +323,12 @@ export default function FeaturesPage() {
 
           {/* CTA */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Get Started?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Get Started?
+            </h3>
             <p className="text-white/60 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using Cliste to transform their customer experience.
+              Join thousands of businesses already using Narxu to transform
+              their customer experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -255,7 +348,6 @@ export default function FeaturesPage() {
           </div>
         </div>
       </div>
-
     </>
-  )
+  );
 }

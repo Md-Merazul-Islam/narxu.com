@@ -11,18 +11,18 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Cliste - AI Automation Solutions",
+  title: "Privacy Policy | Narxu - AI Automation Solutions",
   description:
-    "Learn how Cliste protects your privacy and handles your data. Our commitment to transparency and security in AI automation services.",
+    "Learn how Narxu protects your privacy and handles your data. Our commitment to transparency and security in AI automation services.",
   keywords: [
     "privacy policy",
     "data protection",
     "GDPR",
     "AI privacy",
-    "Cliste",
+    "Narxu",
   ],
   openGraph: {
-    title: "Privacy Policy | Cliste",
+    title: "Privacy Policy | Narxu",
     description: "Our commitment to protecting your privacy and data.",
     type: "website",
   },
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
               <div>
                 <h2 className="text-xl font-semibold mb-3">Overview</h2>
                 <p className="text-white/70 leading-relaxed">
-                  At Cliste, we are committed to protecting your privacy and
+                  At Narxu, we are committed to protecting your privacy and
                   ensuring the security of your personal information. This
                   Privacy Policy explains how we collect, use, disclose, and
                   safeguard your information when you use our AI automation

@@ -1,18 +1,23 @@
-import type { Metadata } from "next"
-import { ROICalculator } from "@/components/roi/roi-calculator"
-
+import type { Metadata } from "next";
+import { ROICalculator } from "@/components/roi/roi-calculator";
 
 export const metadata: Metadata = {
-  title: "ROI Calculator | Cliste - Calculate Your AI Automation Savings",
+  title: "ROI Calculator | Narxu - Calculate Your AI Automation Savings",
   description:
-    "Calculate your potential return on investment with Cliste AI automation. See how much you can save on customer support, sales, and operations.",
-  keywords: ["ROI calculator", "AI savings", "automation ROI", "cost savings", "Cliste"],
+    "Calculate your potential return on investment with Narxu AI automation. See how much you can save on customer support, sales, and operations.",
+  keywords: [
+    "ROI calculator",
+    "AI savings",
+    "automation ROI",
+    "cost savings",
+    "Narxu",
+  ],
   openGraph: {
-    title: "ROI Calculator | Cliste",
-    description: "Calculate your AI automation savings with Cliste.",
+    title: "ROI Calculator | Narxu",
+    description: "Calculate your AI automation savings with Narxu.",
     type: "website",
   },
-}
+};
 
 export default function ROICalculatorPage() {
   return (
@@ -30,7 +35,8 @@ export default function ROICalculatorPage() {
               </span>
             </h1>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              See how much you could save by automating your customer interactions with Cliste AI.
+              See how much you could save by automating your customer
+              interactions with Narxu AI.
             </p>
           </div>
 
@@ -38,5 +44,5 @@ export default function ROICalculatorPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -7,10 +7,10 @@ import Logo from "@/assets/logo-narxu.png";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Dentists", href: "#features" },
-  { name: "Barbers & Salons", href: "#ai-team" },
-  { name: "Restaurants", href: "#testimonials" },
-  { name: "Car Dealerships", href: "/car-dealerships" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export function GlassmorphismNav() {

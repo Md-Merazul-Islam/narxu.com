@@ -3,8 +3,8 @@ import { ContactForm } from "@/components/contact/contact-form";
 import { ContactInfo } from "@/components/contact/contact-info";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Cliste - AI Automation Solutions",
-  description: "Get in touch with Cliste for AI automation solutions.",
+  title: "Contact Us | Narxu - AI Automation Solutions",
+  description: "Get in touch with Narxu for AI automation solutions.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,8 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Ready to transform your business with AI? Our team is here to help you every step of the way.
+            Ready to transform your business with AI? Our team is here to help
+            you every step of the way.
           </p>
         </div>
 

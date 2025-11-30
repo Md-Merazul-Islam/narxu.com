@@ -9,8 +9,8 @@ import { WorkEnvironment } from "@/components/about/work-environment";
 import { CulturalPrograms } from "@/components/about/cultural-programs";
 
 export const metadata: Metadata = {
-  title: "About Cliste - AI-Powered Business Solutions",
-  description: "Learn about Cliste and our comprehensive AI-powered services",
+  title: "About Narxu - AI-Powered Business Solutions",
+  description: "Learn about Narxu and our comprehensive AI-powered services",
 };
 
 export default function AboutPage() {

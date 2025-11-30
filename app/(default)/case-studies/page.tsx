@@ -1,19 +1,25 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import Image from "next/image"
-import { Calendar, Clock, ArrowRight, User } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog | Cliste - AI Automation Insights & News",
+  title: "Blog | Narxu - AI Automation Insights & News",
   description:
-    "Stay updated with the latest trends in AI automation, industry insights, and expert tips from the Cliste team.",
-  keywords: ["AI blog", "automation insights", "AI trends", "machine learning", "Cliste"],
+    "Stay updated with the latest trends in AI automation, industry insights, and expert tips from the Narxu team.",
+  keywords: [
+    "AI blog",
+    "automation insights",
+    "AI trends",
+    "machine learning",
+    "Narxu",
+  ],
   openGraph: {
-    title: "Blog | Cliste",
+    title: "Blog | Narxu",
     description: "AI automation insights, news, and expert tips.",
     type: "website",
   },
-}
+};
 
 const featuredPost = {
   title: "The Future of AI in Enterprise: 2025 and Beyond",
@@ -25,12 +31,13 @@ const featuredPost = {
   date: "Jan 15, 2025",
   readTime: "8 min read",
   slug: "future-ai-enterprise-2025",
-}
+};
 
 const posts = [
   {
     title: "10 Ways AI Chatbots Are Revolutionizing Customer Service",
-    excerpt: "Learn how intelligent chatbots are transforming customer experiences and reducing support costs.",
+    excerpt:
+      "Learn how intelligent chatbots are transforming customer experiences and reducing support costs.",
     image: "/ai-chatbot-customer-service-technology.jpg",
     category: "AI Solutions",
     author: "Michael Torres",
@@ -40,7 +47,8 @@ const posts = [
   },
   {
     title: "Building a Data-Driven Culture with AI Analytics",
-    excerpt: "Strategies for implementing AI-powered analytics that drive better business decisions.",
+    excerpt:
+      "Strategies for implementing AI-powered analytics that drive better business decisions.",
     image: "/data-analytics-dashboard-ai-visualization.jpg",
     category: "Data Analytics",
     author: "Emily Watson",
@@ -50,7 +58,8 @@ const posts = [
   },
   {
     title: "The ROI of AI Automation: What to Expect",
-    excerpt: "A comprehensive guide to measuring and maximizing return on investment from AI automation.",
+    excerpt:
+      "A comprehensive guide to measuring and maximizing return on investment from AI automation.",
     image: "/roi-business-growth-chart-ai.jpg",
     category: "Business Strategy",
     author: "James Park",
@@ -60,7 +69,8 @@ const posts = [
   },
   {
     title: "Securing Your AI Infrastructure: Best Practices",
-    excerpt: "Essential security considerations and best practices for deploying AI systems safely.",
+    excerpt:
+      "Essential security considerations and best practices for deploying AI systems safely.",
     image: "/cybersecurity-ai-shield-technology.jpg",
     category: "Security",
     author: "Lisa Anderson",
@@ -70,7 +80,8 @@ const posts = [
   },
   {
     title: "AI Integration Patterns for Legacy Systems",
-    excerpt: "How to seamlessly integrate modern AI capabilities with existing enterprise infrastructure.",
+    excerpt:
+      "How to seamlessly integrate modern AI capabilities with existing enterprise infrastructure.",
     image: "/system-integration-technology-network.jpg",
     category: "Integration",
     author: "David Kim",
@@ -80,7 +91,8 @@ const posts = [
   },
   {
     title: "Natural Language Processing: A Practical Guide",
-    excerpt: "Understanding NLP applications and how to leverage them for your business needs.",
+    excerpt:
+      "Understanding NLP applications and how to leverage them for your business needs.",
     image: "/natural-language-processing-ai-brain.jpg",
     category: "Technology",
     author: "Rachel Green",
@@ -88,7 +100,7 @@ const posts = [
     readTime: "8 min read",
     slug: "nlp-practical-guide",
   },
-]
+];
 
 const categories = [
   "All",
@@ -98,13 +110,11 @@ const categories = [
   "Business Strategy",
   "Security",
   "Technology",
-]
+];
 
 export default function BlogPage() {
   return (
     <>
-
-
       <div className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -118,7 +128,8 @@ export default function BlogPage() {
               </span>
             </h1>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Expert perspectives on AI automation, industry trends, and the future of intelligent business solutions.
+              Expert perspectives on AI automation, industry trends, and the
+              future of intelligent business solutions.
             </p>
           </div>
 
@@ -157,11 +168,15 @@ export default function BlogPage() {
                     </div>
                   </div>
                   <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <span className="text-purple-400 text-sm font-medium mb-4">{featuredPost.category}</span>
+                    <span className="text-purple-400 text-sm font-medium mb-4">
+                      {featuredPost.category}
+                    </span>
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-purple-300 transition-colors">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-white/60 mb-6 leading-relaxed">{featuredPost.excerpt}</p>
+                    <p className="text-white/60 mb-6 leading-relaxed">
+                      {featuredPost.excerpt}
+                    </p>
                     <div className="flex items-center gap-6 text-sm text-white/50">
                       <span className="flex items-center gap-2">
                         <User className="w-4 h-4" />
@@ -204,7 +219,9 @@ export default function BlogPage() {
                     <h3 className="text-lg font-semibold mb-3 group-hover:text-purple-300 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-white/60 text-sm mb-4 flex-1 line-clamp-2">{post.excerpt}</p>
+                    <p className="text-white/60 text-sm mb-4 flex-1 line-clamp-2">
+                      {post.excerpt}
+                    </p>
                     <div className="flex items-center justify-between text-xs text-white/50 pt-4 border-t border-white/10">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
@@ -231,5 +248,5 @@ export default function BlogPage() {
         </div>
       </div>
     </>
-  )
+  );
 }

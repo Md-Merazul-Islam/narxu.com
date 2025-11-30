@@ -11,6 +11,7 @@ import {
   YoutubeIcon,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FooterLink {
   title: string;
@@ -69,14 +70,16 @@ export function Footer() {
 
       <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
-          <Image
-            src={Logo}
-            alt="Narxu Logo"
-            width={180} // pixel values, not 0-1 scale
-            height={100} // adjust height to match your logo ratio
-            className=""
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Narxu Logo"
+              width={180} // pixel values, not 0-1 scale
+              height={100} // adjust height to match your logo ratio
+              className=""
+              priority
+            />
+          </Link>
 
           <div className="hidden md:block mt-8 text-sm text-muted-foreground">
             <p>© {new Date().getFullYear()} Narxu. All rights reserved.</p>

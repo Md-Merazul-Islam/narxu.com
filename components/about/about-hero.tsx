@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Bot, Sparkles, Cpu } from "lucide-react"
+import { motion } from "framer-motion";
+import { Bot, Sparkles, Cpu } from "lucide-react";
 
 export function AboutHero() {
   return (
@@ -41,8 +41,9 @@ export function AboutHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12"
         >
-          At Cliste, we specialize in cutting-edge AI solutions, custom software development, and digital transformation
-          services that help businesses scale and thrive in the modern era.
+          At Narxu, we specialize in cutting-edge AI solutions, custom software
+          development, and digital transformation services that help businesses
+          scale and thrive in the modern era.
         </motion.p>
 
         {/* Floating AI Elements */}
@@ -65,7 +66,10 @@ export function AboutHero() {
               />
               <div
                 className="absolute inset-0 -m-8 border border-purple-500/10 rounded-full animate-spin"
-                style={{ animationDuration: "15s", animationDirection: "reverse" }}
+                style={{
+                  animationDuration: "15s",
+                  animationDirection: "reverse",
+                }}
               />
               <div
                 className="absolute inset-0 -m-12 border border-purple-500/5 rounded-full animate-spin"
@@ -99,5 +103,5 @@ export function AboutHero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,14 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle, Globe } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, MessageCircle, Globe } from "lucide-react";
 
 const contactDetails = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["123 AI Innovation Hub", "Tech District, San Francisco", "CA 94105, USA"],
+    details: [
+      "123 AI Innovation Hub",
+      "Tech District, San Francisco",
+      "CA 94105, USA",
+    ],
   },
   {
     icon: Phone,
@@ -14,19 +18,31 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["hello@cliste.ai", "support@cliste.ai"],
+    details: ["hello@Narxu.ai", "support@Narxu.ai"],
   },
   {
     icon: Clock,
     title: "Working Hours",
-    details: ["Monday - Friday: 9AM - 6PM", "Saturday: 10AM - 4PM", "Sunday: Closed"],
+    details: [
+      "Monday - Friday: 9AM - 6PM",
+      "Saturday: 10AM - 4PM",
+      "Sunday: Closed",
+    ],
   },
-]
+];
 
 const quickLinks = [
-  { icon: MessageCircle, title: "Live Chat", description: "Chat with our AI assistant 24/7" },
-  { icon: Globe, title: "Schedule Demo", description: "Book a personalized demo session" },
-]
+  {
+    icon: MessageCircle,
+    title: "Live Chat",
+    description: "Chat with our AI assistant 24/7",
+  },
+  {
+    icon: Globe,
+    title: "Schedule Demo",
+    description: "Book a personalized demo session",
+  },
+];
 
 export function ContactInfo() {
   return (
@@ -70,12 +86,13 @@ export function ContactInfo() {
       <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-6">
         <h3 className="font-semibold text-white mb-2">Enterprise Solutions</h3>
         <p className="text-white/60 text-sm mb-4">
-          Looking for custom AI solutions for your enterprise? Our team of experts is ready to help you scale.
+          Looking for custom AI solutions for your enterprise? Our team of
+          experts is ready to help you scale.
         </p>
         <button className="text-purple-400 font-medium text-sm hover:text-purple-300 transition-colors">
           Contact Enterprise Sales →
         </button>
       </div>
     </div>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { GlassmorphismNav } from "@/components/Navbar/glassmorphism-nav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cliste - AI-Powered Business Solutions",
+  title: "Narxu - AI-Powered Business Solutions",
   description: "AI automation solutions for modern businesses",
 };
 
@@ -32,9 +32,7 @@ export default function RootLayout({
           <GlassmorphismNav />
 
           {/* Page Content */}
-          <main className="relative z-10">
-            {children}
-          </main>
+          <main className="relative z-10">{children}</main>
 
           {/* Footer - Appears on all pages */}
           <Footer />

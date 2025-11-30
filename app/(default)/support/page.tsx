@@ -1,5 +1,5 @@
-import type { Metadata } from "next"
-import Link from "next/link"
+import type { Metadata } from "next";
+import Link from "next/link";
 import {
   MessageCircle,
   Phone,
@@ -13,19 +13,25 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
-} from "lucide-react"
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Support | Cliste - Help Center & Customer Service",
+  title: "Support | Narxu - Help Center & Customer Service",
   description:
-    "Get help with Cliste AI automation. Access our knowledge base, contact support, or schedule a call with our team.",
-  keywords: ["support", "help center", "customer service", "AI support", "Cliste"],
+    "Get help with Narxu AI automation. Access our knowledge base, contact support, or schedule a call with our team.",
+  keywords: [
+    "support",
+    "help center",
+    "customer service",
+    "AI support",
+    "Narxu",
+  ],
   openGraph: {
-    title: "Support | Cliste",
-    description: "Help center and customer support for Cliste AI platform.",
+    title: "Support | Narxu",
+    description: "Help center and customer support for Narxu AI platform.",
     type: "website",
   },
-}
+};
 
 const supportOptions = [
   {
@@ -60,7 +66,7 @@ const supportOptions = [
     available: "Next Available: Today",
     highlight: false,
   },
-]
+];
 
 const faqCategories = [
   {
@@ -114,39 +120,72 @@ const faqCategories = [
       },
     ],
   },
-]
+];
 
 const helpResources = [
-  { icon: BookOpen, title: "Documentation", description: "Comprehensive guides and tutorials", href: "/docs" },
-  { icon: FileText, title: "Knowledge Base", description: "Search our help articles", href: "/docs" },
-  { icon: Zap, title: "Status Page", description: "Check system status", href: "/status" },
-  { icon: HelpCircle, title: "Community Forum", description: "Connect with other users", href: "/community" },
-]
+  {
+    icon: BookOpen,
+    title: "Documentation",
+    description: "Comprehensive guides and tutorials",
+    href: "/docs",
+  },
+  {
+    icon: FileText,
+    title: "Knowledge Base",
+    description: "Search our help articles",
+    href: "/docs",
+  },
+  {
+    icon: Zap,
+    title: "Status Page",
+    description: "Check system status",
+    href: "/status",
+  },
+  {
+    icon: HelpCircle,
+    title: "Community Forum",
+    description: "Connect with other users",
+    href: "/community",
+  },
+];
 
 const supportTiers = [
   {
     name: "Standard",
     description: "For small teams getting started",
-    features: ["Email support", "24-hour response time", "Knowledge base access", "Community forum"],
+    features: [
+      "Email support",
+      "24-hour response time",
+      "Knowledge base access",
+      "Community forum",
+    ],
   },
   {
     name: "Priority",
     description: "For growing businesses",
-    features: ["Live chat support", "4-hour response time", "Phone support", "Dedicated success manager"],
+    features: [
+      "Live chat support",
+      "4-hour response time",
+      "Phone support",
+      "Dedicated success manager",
+    ],
     highlight: true,
   },
   {
     name: "Enterprise",
     description: "For large organizations",
-    features: ["24/7 dedicated support", "1-hour response time", "Custom SLAs", "On-site training"],
+    features: [
+      "24/7 dedicated support",
+      "1-hour response time",
+      "Custom SLAs",
+      "On-site training",
+    ],
   },
-]
+];
 
 export default function SupportPage() {
   return (
     <>
-
-
       <div className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -160,7 +199,8 @@ export default function SupportPage() {
               </span>
             </h1>
             <p className="text-xl text-white/60 max-w-2xl mx-auto">
-              Our support team is dedicated to helping you succeed with Cliste AI automation.
+              Our support team is dedicated to helping you succeed with Narxu AI
+              automation.
             </p>
           </div>
 
@@ -199,13 +239,17 @@ export default function SupportPage() {
               >
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    option.highlight ? "bg-purple-500/30" : "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+                    option.highlight
+                      ? "bg-purple-500/30"
+                      : "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
                   }`}
                 >
                   <option.icon className="w-6 h-6 text-purple-400" />
                 </div>
                 <h3 className="font-semibold mb-2">{option.title}</h3>
-                <p className="text-white/60 text-sm mb-4">{option.description}</p>
+                <p className="text-white/60 text-sm mb-4">
+                  {option.description}
+                </p>
                 <div className="flex items-center gap-2 text-xs text-green-400 mb-4">
                   <Clock className="w-3 h-3" />
                   {option.available}
@@ -234,7 +278,9 @@ export default function SupportPage() {
                 <resource.icon className="w-5 h-5 text-purple-400 group-hover:scale-110 transition-transform" />
                 <div>
                   <h4 className="font-medium text-sm">{resource.title}</h4>
-                  <p className="text-white/50 text-xs">{resource.description}</p>
+                  <p className="text-white/50 text-xs">
+                    {resource.description}
+                  </p>
                 </div>
               </Link>
             ))}
@@ -242,11 +288,18 @@ export default function SupportPage() {
 
           {/* FAQ Section */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">
+              Frequently Asked Questions
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {faqCategories.map((category, catIndex) => (
-                <div key={catIndex} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-                  <h3 className="font-semibold mb-4 text-purple-300">{category.title}</h3>
+                <div
+                  key={catIndex}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6"
+                >
+                  <h3 className="font-semibold mb-4 text-purple-300">
+                    {category.title}
+                  </h3>
                   <div className="space-y-4">
                     {category.questions.map((faq, faqIndex) => (
                       <details key={faqIndex} className="group">
@@ -254,7 +307,9 @@ export default function SupportPage() {
                           <span className="text-purple-400 mt-0.5">+</span>
                           {faq.q}
                         </summary>
-                        <p className="mt-2 text-sm text-white/60 pl-4 border-l border-white/10">{faq.a}</p>
+                        <p className="mt-2 text-sm text-white/60 pl-4 border-l border-white/10">
+                          {faq.a}
+                        </p>
                       </details>
                     ))}
                   </div>
@@ -265,13 +320,17 @@ export default function SupportPage() {
 
           {/* Support Tiers */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-8">Support Plans</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">
+              Support Plans
+            </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {supportTiers.map((tier, index) => (
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-md border rounded-2xl p-6 ${
-                    tier.highlight ? "border-purple-500/50 scale-105" : "border-white/10"
+                    tier.highlight
+                      ? "border-purple-500/50 scale-105"
+                      : "border-white/10"
                   }`}
                 >
                   {tier.highlight && (
@@ -280,10 +339,15 @@ export default function SupportPage() {
                     </span>
                   )}
                   <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
-                  <p className="text-white/60 text-sm mb-6">{tier.description}</p>
+                  <p className="text-white/60 text-sm mb-6">
+                    {tier.description}
+                  </p>
                   <ul className="space-y-3">
                     {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-white/70">
+                      <li
+                        key={idx}
+                        className="flex items-center gap-2 text-sm text-white/70"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {feature}
                       </li>
@@ -297,9 +361,12 @@ export default function SupportPage() {
           {/* Contact CTA */}
           <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-3xl p-8 md:p-12 text-center">
             <Headphones className="w-12 h-12 text-purple-400 mx-auto mb-6" />
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Still Need Help?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Still Need Help?
+            </h3>
             <p className="text-white/60 mb-8 max-w-2xl mx-auto">
-              Our dedicated support team is available to assist you with any questions or issues you may have.
+              Our dedicated support team is available to assist you with any
+              questions or issues you may have.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -319,7 +386,6 @@ export default function SupportPage() {
           </div>
         </div>
       </div>
-
     </>
-  )
+  );
 }
